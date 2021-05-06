@@ -1,0 +1,5 @@
+.pokemon {
+    background-color: rgb(81, 226, 231);
+    height: 100vh;
+    display: flex;
+}

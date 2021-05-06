@@ -1,0 +1,17 @@
+.element__button {
+    border-radius: 10%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background: none;
+}
+
+.element__button:focus {
+    outline: none;
+}
+
+.element__button:hover {
+    opacity: 0.6;
+    transform: scale(1.25);
+    transition: ease-in 0.3s;
+}
+

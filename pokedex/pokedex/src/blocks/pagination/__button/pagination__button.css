@@ -1,0 +1,6 @@
+.pagination__button {
+    background-color: burlywood;
+    border-radius: 10px;
+    cursor: grab;
+    margin-left: 4px;
+}

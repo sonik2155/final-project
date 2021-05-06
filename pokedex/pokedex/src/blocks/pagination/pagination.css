@@ -1,0 +1,8 @@
+.pagination {
+    height: 16vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5vh;
+  }
