@@ -3794,7 +3794,9 @@
     },
     {
       "name": "magearna-original",
-      "id": 10147
+      "id": 10147,
+      "status": "isCatched",
+      "date": "08.05.2021"
     }
   ]
 }

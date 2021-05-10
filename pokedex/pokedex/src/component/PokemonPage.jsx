@@ -1,23 +1,34 @@
-import React from 'react';
-import {Link, useParams} from 'react-router-dom';
+import React from "react";
 
- function PokemonPage({pokemons}) {
-    let { id } = useParams();
+function PokemonPage({ selectedCard, openPokemonPage, onClose }) {
 
-   const pokemon = pokemons.find(pok => pok.id === id)
-console.log(pokemon)
-    return (
-<section className='pokemon'>
-<Link to='/'><button className='pokemon__btn-back' type='button'></button></Link> 
-<div className='pokemon__container'>
-<img className='pokemon__picture' alt='' src=''/>
-<h1 className='pokemon__name'>Name:  </h1>
-<h2 className='pokemon__date'>Date: </h2>
-<p className='pokemon__identificator'>ID: {id}</p>
-
-</div>
-</section>
-    )
-};
+    
+  return (
+    <>
+      <div className={`pokemon ${openPokemonPage && "pokemon_is-open"}`}>
+        <button className="pokemon__btn-back" onClick={onClose} type="button">
+          Back
+        </button>
+        <div className="pokemon__container">
+          <img
+            className="pokemon__picture"
+            alt={selectedCard.name}
+            src={`./pokemons/${selectedCard.id}.png`}
+          />
+          <div className="pokemon__parameters">
+          <h1 className="pokemon__name">
+            Name: <span>{selectedCard.name}</span>
+          </h1>
+          <h2 className="pokemon__date">Date: {}</h2>
+          <p className="pokemon__identificator">
+            ID: <span>{selectedCard.id}</span>
+          </p>
+          <p className="pokemon__status">Status : <span>{}</span></p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
 
 export default PokemonPage;

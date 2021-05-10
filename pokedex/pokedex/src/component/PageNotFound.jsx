@@ -1,18 +1,27 @@
+import React from "react";
 import { Link } from "react-router-dom";
-import React from 'react';
 
-function PageNotFound () {
-    return (
-      <div className="not-found">
-        <h3 className="not-found__title">
-         <span>404</span> - Страница не найдена
-        </h3>
-        <p className="not-found__text">
-         Ой, здесь ничего нет
-        </p>
-        <Link className="button button_type_to-main" to="/">Назад</Link>
+function PageNotFound() {
+  return (
+    <div className="not-found">
+      <aside className="not-found__container">
+      <img
+        className="not-found__image"
+        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4424790/Mirror.png"
+        alt="Page not Found"
+      />
+      </aside>
+      <div>
+      <h1 className="not-found__title">Sorry!</h1>
+      <p className="not-found__text">
+        Either you aren't cool enough to visit this page or it doesn't exist
+      </p>
+      <Link to="/">
+        <button type="button" className="button not-found__button">Now, get back to the app</button>
+      </Link>
       </div>
-    )
-  }
-  
-  export default PageNotFound; 
+    </div>
+  );
+}
+
+export default PageNotFound;

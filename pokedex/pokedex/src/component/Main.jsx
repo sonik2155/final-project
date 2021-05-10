@@ -1,19 +1,13 @@
 import React from "react";
 import Card from "./Card";
-import { POKEMONS_PAGE} from '../utils/constants';
-import { Link, useRouteMatch } from 'react-router-dom';
+import { POKEMONS_PAGE } from "../utils/constants";
 
-function Main({ pokemons, page }) {
- const statrIndex = (page - 1) * POKEMONS_PAGE;
- const selectedPokemons = pokemons.slice(statrIndex, statrIndex + POKEMONS_PAGE);
- let {path} = useRouteMatch();
-
- function handleClick(e) {
-   e.preventDefault();
-  e.target.disabled = true
-  
- };
- 
+function Main({ pokemons, page, onPageOpen, onUpdatePokemon }) {
+  const statrIndex = (page - 1) * POKEMONS_PAGE;
+  const selectedPokemons = pokemons.slice(
+    statrIndex,
+    statrIndex + POKEMONS_PAGE
+  );
 
   return (
     <main className="main">
@@ -22,15 +16,11 @@ function Main({ pokemons, page }) {
         <ul className="element">
           {selectedPokemons.map((card, i) => (
             <li className="element__card" key={card.id}>
-              <div className="element__container">
-        <Link to={`${path}/${card.id}`}><img className='element__pic' src={`./pokemons/${card.id}.png`} alt={card.name}/></Link>
-        <h2 className="element__title">{card.name}</h2>
-        <button type='submit' onClick={handleClick} aria-label='Catch pokemon' className='element__button'>Catch</button>
-      </div>
-              {/* <Card 
-              element={card} 
-             /> */}
-            </li> 
+              {<Card card={card} 
+              onPageOpen={onPageOpen} 
+              onUpdatePokemon={onUpdatePokemon}
+             />}
+            </li>
           ))}
         </ul>
       </section>

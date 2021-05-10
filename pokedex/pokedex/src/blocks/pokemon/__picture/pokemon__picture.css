@@ -1,0 +1,5 @@
+.pokemon__picture {
+    max-width: 300px;
+    border: solid 1px rgba(22, 22, 8, 0.336);
+    border-radius: 10px;
+}

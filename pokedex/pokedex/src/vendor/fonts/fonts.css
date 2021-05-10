@@ -21,3 +21,8 @@
     font-weight: 900;
     font-style: normal;
 }
+
+@font-face {
+    font-family: "Fontdiner Swanky";
+    src: url("https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&family=Roboto:wght@500&display=swap");
+}

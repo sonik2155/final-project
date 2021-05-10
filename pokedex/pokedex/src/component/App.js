@@ -8,55 +8,103 @@ import Pagination from "./Pagination";
 import CaughtPokemons from "./CaughtPokemons";
 import { POKEMONS_PAGE } from "../utils/constants";
 import { Route, Switch } from "react-router-dom";
-import { getAllPokemon, getOnePokemon } from "../utils/actions";
+import { getAllPokemon, patchPokemon } from "../utils/utils";
+import Context from '../utils/context';
 
 function App() {
   const [pokemons, setPokemons] = useState([]);
-  const [pokemon, setPokemon] = useState([]);
+  const [context, setContext] = useState(false)
+  const [caugthPokemons, setcaugthPokemons] = useState([]);
   const [page, setPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(0)
+  const [totalPages, setTotalPages] = useState(0);
+  const [openPokemonPage, setOpenPokemonPage] = useState(false);
+  const [selectedCard, setSelectedCards] = useState({
+    openPokemonPage: false,
+  });
+
+  function setupCards(pokemons) {
+    setPokemons(
+      pokemons.map((item) => ({
+        name: item.name,
+        id: item.id,
+      }))
+    );
+  };
 
   useEffect(() => {
     getAllPokemon()
-    .then(res => setPokemons(res))
-    .catch(err => console.log(err))
+      .then((res) => setupCards(res))
+      .catch((err) => console.log(err));
 
-    setTotalPages(Math.ceil(pokemons.length / POKEMONS_PAGE))
+    setTotalPages(Math.ceil(pokemons.length / POKEMONS_PAGE));
   }, [pokemons.length]);
 
-  const handleClick = (number) => {
-    setPage(number)
+  function handleClick(number) {
+    setPage(number);
   }
+
+  function handlePagePokemonOpen(item) {
+    setSelectedCards(item);
+    setOpenPokemonPage(true);
+  }
+
+  function handleClosePokemonPage() {
+    setOpenPokemonPage(false);
+  }
+
+  useEffect(() => {
+    function handleEscClose(event) {
+      if (event.key === "Escape") {
+        handleClosePokemonPage();
+      }
+    }
+    document.addEventListener("keydown", handleEscClose);
+    return () => {
+      document.removeEventListener("keydown", handleEscClose);
+    };
+  });
+
+ function patchPokemonRes(item) {
+   patchPokemon({
+     //date: item.date,
+     status: item.status,
+   }).then((res) => {
+    setContext(res) 
+   }).catch(err => console.log(err))
+ };
+
 
   return (
     <div className="page">
-        <Route>
-          <Header />
-        </Route>
-        <Route path='/CaughtPokemons'>
-          <CaughtPokemons />
-        </Route>
-        <Switch>
-          <Route exact path='/'>
-            <Main 
+      <Context.Provider value={context}>
+      <Route>
+        <Header />
+      </Route>
+      <Switch>
+        <Route exact path="/">
+          <Main
             pokemons={pokemons}
             allPokemons={pokemons.length}
-            page={page} />
-            <Pagination 
-             totalPages={totalPages}
-             handleClick={handleClick}/>
-          </Route>
-          <Route path='/PokemonPage/:id'>
-            <PokemonPage 
-            pokemons={pokemons}
-            />
-          </Route>
-          <Route path="*">
-            <PageNotFound />
-          </Route>
-        </Switch>
-        <Footer />
-      </div>
+            page={page}
+            onPageOpen={handlePagePokemonOpen}
+            onUpdatePokemon={patchPokemonRes}
+          />
+          <Pagination 
+          totalPages={totalPages} 
+          handleClick={handleClick} />
+        </Route>
+        <Route path="*">
+          <PageNotFound />
+        </Route>
+      </Switch>
+      <Footer />
+      <PokemonPage
+        selectedCard={selectedCard}
+        openPokemonPage={openPokemonPage}
+        onClose={handleClosePokemonPage}
+      />
+      </Context.Provider>
+    </div>
   );
 }
 

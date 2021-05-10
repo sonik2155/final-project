@@ -1,5 +1,11 @@
 .not-found {
-    max-width: 400px;
-    width: 100%;
-    margin: auto;
+    display: flex;
+    background:linear-gradient(to right, white 50%, #383838 50%  ) ;
+    align-items: center;
+    height: 100vh;
+    max-width: 1000px;  
+    margin: 0 auto;
+      cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4424790/cursors-edge.png"),
+      auto;
 }
+

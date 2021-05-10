@@ -1,20 +1,45 @@
-import React from "react";
-import { Link, useRouteMatch } from 'react-router-dom';
+import React, { useState, useEffect, useContext } from "react";
+import context from "../utils/context";
 
-function Card({ element }) {
-  let {path} = useRouteMatch()
-  
-  const card = {
-  name: element.name,
-  id: element.id,
+function Card({ card, onPageOpen, onUpdatePokemon }) {
+const currentPokemon   = useContext(context);
+const [iscaught, setIsCaught] = useState(false)
+
+
+
+  useEffect(() => {
+    setIsCaught(currentPokemon.status)
+  }, [currentPokemon])
+
+  function handleClick(e) {
+    e.target.textContent = 'Caught';
+    setIsCaught(!iscaught)
+    onUpdatePokemon({})
+  }
+
+  function handlePageOpen() {
+    onPageOpen(card);
   }
 
   return (
     <>
       <div className="element__container">
-        <Link to={`${path}/${element.id}`}><img className='element__pic' src={`./pokemons/${card.id}.png`} alt={card.name}/></Link>
+        <img
+          onClick={handlePageOpen}
+          className="element__pic"
+          src={`./pokemons/${card.id}.png`}
+          alt={card.name}
+        />
         <h2 className="element__title">{card.name}</h2>
-        <button aria-label='Catch pokemon' className='element__button'>Catch</button>
+        <button
+          type='button'
+          aria-label="Catch pokemon"
+          onClick={handleClick}
+          disabled={iscaught}
+          className="element__button"
+        >
+          Catch
+        </button>
       </div>
     </>
   );
