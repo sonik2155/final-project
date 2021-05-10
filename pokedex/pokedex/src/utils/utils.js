@@ -1,3 +1,5 @@
+import PokemonDate from '../utils/constants';
+
 export function getAllPokemon() {
     return fetch('http://localhost:3000/pokemons')
     .then((res) => {
@@ -8,15 +10,15 @@ export function getAllPokemon() {
     })
 };
 
-export function patchPokemon({status}) {
-    return fetch(`http://localhost:3000/pokemons`, {
+export function patchPokemon({status, id}) {
+    return fetch(`http://localhost:3000/pokemons `, {
         method: 'PATCH',
         headers: {
             "Content-type": "application/json",
         },
         body: JSON.stringify({
             status: status,
-            //date: new Date(Date.now())
+            date: PokemonDate(), 
         }),
     }).then((res) => {
         if(res.ok) {

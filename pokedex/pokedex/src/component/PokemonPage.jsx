@@ -1,8 +1,6 @@
 import React from "react";
 
-function PokemonPage({ selectedCard, openPokemonPage, onClose }) {
-
-    
+function PokemonPage({ selectedCard, openPokemonPage, onClose, caugthPokemons }) {
   return (
     <>
       <div className={`pokemon ${openPokemonPage && "pokemon_is-open"}`}>
@@ -19,11 +17,11 @@ function PokemonPage({ selectedCard, openPokemonPage, onClose }) {
           <h1 className="pokemon__name">
             Name: <span>{selectedCard.name}</span>
           </h1>
-          <h2 className="pokemon__date">Date: {}</h2>
+          <h2 className="pokemon__date">Date: {caugthPokemons.date}</h2>
           <p className="pokemon__identificator">
             ID: <span>{selectedCard.id}</span>
           </p>
-          <p className="pokemon__status">Status : <span>{}</span></p>
+          <p className="pokemon__status">Status : <span>{caugthPokemons.status? caugthPokemons.status : 'Not Caught yet' }</span></p>
           </div>
         </div>
       </div>

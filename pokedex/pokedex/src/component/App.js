@@ -66,13 +66,13 @@ function App() {
 
  function patchPokemonRes(item) {
    patchPokemon({
-     //date: item.date,
      status: item.status,
    }).then((res) => {
-    setContext(res) 
+    setContext(res)
+    console.log(res)
+    setcaugthPokemons(res) 
    }).catch(err => console.log(err))
  };
-
 
   return (
     <div className="page">
@@ -93,6 +93,11 @@ function App() {
           totalPages={totalPages} 
           handleClick={handleClick} />
         </Route>
+        <Route path="/pokemons/:id">
+          <CaughtPokemons 
+          pokemons={pokemons}
+          />
+        </Route>
         <Route path="*">
           <PageNotFound />
         </Route>
@@ -102,6 +107,7 @@ function App() {
         selectedCard={selectedCard}
         openPokemonPage={openPokemonPage}
         onClose={handleClosePokemonPage}
+        caugthPokemons={caugthPokemons}
       />
       </Context.Provider>
     </div>

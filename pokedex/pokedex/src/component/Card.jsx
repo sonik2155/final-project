@@ -1,20 +1,21 @@
 import React, { useState, useEffect, useContext } from "react";
+import { Link } from 'react-router-dom'
 import context from "../utils/context";
 
 function Card({ card, onPageOpen, onUpdatePokemon }) {
-const currentPokemon   = useContext(context);
+const currentPokemon = useContext(context);
 const [iscaught, setIsCaught] = useState(false)
-
-
 
   useEffect(() => {
     setIsCaught(currentPokemon.status)
-  }, [currentPokemon])
+  }, [])
 
   function handleClick(e) {
     e.target.textContent = 'Caught';
     setIsCaught(!iscaught)
-    onUpdatePokemon({})
+    onUpdatePokemon({
+      status: 'isCaught',
+    })
   }
 
   function handlePageOpen() {
@@ -40,6 +41,7 @@ const [iscaught, setIsCaught] = useState(false)
         >
           Catch
         </button>
+       <Link to={`pokemons/${card.id}`}><button>Go</button></Link> 
       </div>
     </>
   );
