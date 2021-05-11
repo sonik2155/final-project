@@ -1,31 +1,33 @@
 import React from "react";
+import { useParams, Link } from "react-router-dom";
 
-function PokemonPage({ selectedCard, openPokemonPage, onClose, caugthPokemons }) {
+function PokemonPage({ caugthPokemons, pokemons }) {
+  let { id } = useParams();
+  const pokemon = pokemons.find(pokemon => pokemon.id ==  id)
+
   return (
-    <>
-      <div className={`pokemon ${openPokemonPage && "pokemon_is-open"}`}>
-        <button className="pokemon__btn-back" onClick={onClose} type="button">
+        <section className="pokemon">
+          <Link to='/'><button className="pokemon__btn-back" type="button">
           Back
-        </button>
+        </button></Link>
         <div className="pokemon__container">
           <img
             className="pokemon__picture"
-            alt={selectedCard.name}
-            src={`./pokemons/${selectedCard.id}.png`}
+            alt={pokemon.name}
+            src={`../../pokemons/${pokemon.id}.png`}
           />
           <div className="pokemon__parameters">
           <h1 className="pokemon__name">
-            Name: <span>{selectedCard.name}</span>
+            Name: <span>{pokemon.name}</span>
           </h1>
           <h2 className="pokemon__date">Date: {caugthPokemons.date}</h2>
           <p className="pokemon__identificator">
-            ID: <span>{selectedCard.id}</span>
+            ID: <span>{pokemon.id}</span>
           </p>
-          <p className="pokemon__status">Status : <span>{caugthPokemons.status? caugthPokemons.status : 'Not Caught yet' }</span></p>
+          { <p className="pokemon__status">Status : <span>{caugthPokemons.status? caugthPokemons.status : 'Not Caught yet'}</span></p> }
           </div>
         </div>
-      </div>
-    </>
+        </section>
   );
 }
 

@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./Card";
 import { POKEMONS_PAGE } from "../utils/constants";
 
-function Main({ pokemons, page, onPageOpen, onUpdatePokemon }) {
+function Main({ pokemons, page, onUpdatePokemon }) {
   const statrIndex = (page - 1) * POKEMONS_PAGE;
   const selectedPokemons = pokemons.slice(
     statrIndex,
@@ -16,8 +16,7 @@ function Main({ pokemons, page, onPageOpen, onUpdatePokemon }) {
         <ul className="element">
           {selectedPokemons.map((card, i) => (
             <li className="element__card" key={card.id}>
-              {<Card card={card} 
-              onPageOpen={onPageOpen} 
+              {<Card card={card}  
               onUpdatePokemon={onUpdatePokemon}
              />}
             </li>
