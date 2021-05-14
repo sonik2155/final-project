@@ -5,3 +5,4 @@ export default function PokemonDate() {
 };
 
 export const POKEMONS_PAGE = 20;
+

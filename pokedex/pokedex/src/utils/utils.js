@@ -24,7 +24,8 @@ export function patchPokemon({status, id}) {
         },
         body: JSON.stringify({
             status: status,
-            date: PokemonDate(), 
+            date: PokemonDate(),
+            id: id, 
         }),
     }).then((res) => {
         if(res.ok) {

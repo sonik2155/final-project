@@ -740,9 +740,8 @@
     },
     {
       "name": "sudowoodo",
-      "id": 185,
-      "status": "isCaught",
-      "date": "2021-05-10T11:26:39.173Z"
+      "id": 185
+
     },
     {
       "name": "politoed",
@@ -3798,9 +3797,7 @@
     },
     {
       "name": "magearna-original",
-      "id": 10147,
-      "status": "isCatched",
-      "date": "08.05.2021"
+      "id": 10147
     }
   ]
 }

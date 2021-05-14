@@ -9,15 +9,17 @@
 @import url('./blocks/page/page.css'); 
  
 @import url('./blocks/elements/elements.css'); 
+@import url('./blocks/elements/__title/elements__title.css'); 
 @import url('./blocks/elements/__count/elements__count.css'); 
-@import url('./blocks/element/element.css'); 
-
+ 
 @import url('./blocks/pokemon/pokemon.css'); 
+@import url('./blocks/pokemon/__link/pokemon__link.css'); 
 @import url('./blocks/pokemon/__container/pokemon__container.css');
 @import url('./blocks/pokemon/__picture/pokemon__picture.css'); 
 @import url('./blocks/pokemon/__parameters/pokemon__parameters.css');
-@import url('./blocks/pokemon/__btn-back/pokemon__btn-back.css');   
+@import url('./blocks/pokemon/__btn-back/pokemon__btn-back.css');  
 
+@import url('./blocks/element/element.css');
 @import url('./blocks/element/__pic/element__pic.css'); 
 @import url('./blocks/element/__title/element__title.css'); 
 @import url('./blocks/element/__card/element__card.css'); 

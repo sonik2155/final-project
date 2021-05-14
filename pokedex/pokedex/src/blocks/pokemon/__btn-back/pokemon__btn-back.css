@@ -2,13 +2,11 @@
     border: white solid 1px;
     background: none;
     cursor: pointer;
-    display: flex;
     width: 150px;
     height: 50px;
     border-radius: 2px;
     padding: 0;
     margin: auto;
-    justify-content: center;
 }
 
 .pokemon__btn-back:hover {

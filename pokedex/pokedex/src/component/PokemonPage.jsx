@@ -7,13 +7,13 @@ function PokemonPage({ caugthPokemons, pokemons }) {
 
   return (
         <section className="pokemon">
-          <Link to='/'><button className="pokemon__btn-back" type="button">
+          <Link className='pokemon__link' to='/'><button className="pokemon__btn-back" type="button">
           Back
         </button></Link>
         <div className="pokemon__container">
           <img
             className="pokemon__picture"
-            alt={pokemon.name}
+            alt='pokemon'
             src={`../../pokemons/${pokemon.id}.png`}
           />
           <div className="pokemon__parameters">
