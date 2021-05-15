@@ -23,7 +23,7 @@ const [iscaught, setIsCaught] = useState(false);
       <Link to={`/pokemon/${card.id}`}>
         <img
           className="element__pic"
-          src={`./pokemons/${card.id}.png`}
+          src="<%=require{`../images/pokemons/${card.id}.png`}%>"
           alt={card.name}
           /> 
         </Link> 
