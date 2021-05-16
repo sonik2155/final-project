@@ -43,7 +43,6 @@ function App() {
     setPage(number);
   }
 
-
   return (
     <div className="page">
       <Context.Provider value={context}>

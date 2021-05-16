@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import context from "../utils/context";
 
 function Card({ card, onUpdatePokemon }) {
+const image = require(`../../public/pokemons/${card.id}.png`);
 const currentPokemon = useContext(context);
 const [iscaught, setIsCaught] = useState(false);
 
@@ -18,12 +19,13 @@ const [iscaught, setIsCaught] = useState(false);
     })
   };
 
+
   return (
       <div className="element__container">
       <Link to={`/pokemon/${card.id}`}>
         <img
           className="element__pic"
-          src="<%=require{`../images/pokemons/${card.id}.png`}%>"
+          src={`../../pokemons/${card.id}.png`}
           alt={card.name}
           /> 
         </Link> 

@@ -13,7 +13,7 @@ function CaughtPokemons({ pokemons }) {
             <div className="element__container">
               <img
                 className="element__pic"
-                src={`./pokemons/${pokemon.id}.png`}
+                src={`../../pokemons/${pokemon.id}.png`}
                 alt={pokemon.name}
               />
               <h2 className="element__title">{pokemon.name}</h2>

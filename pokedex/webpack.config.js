@@ -13,13 +13,15 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
-    publicPath: '',
+    publicPath: '/static/',
   },
   mode: 'development',
   devServer: {
-    contentBase: path.resolve(__dirname, './dist'),
+    contentBase: path.resolve(__dirname, 'dist'),
     open: true,
     compress: true,
+    historyApiFallback: true,
+    hot: true,
     port: 3001
   },
   module: {
@@ -31,6 +33,7 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|gif|woff(2)?|eot|ttf|otf)$/,
         type: 'asset/resource',
+        use: ['file-loader?name=./pokemons/[name].[ext]'],
       },
       {
         test: /\.css$/,

@@ -651,7 +651,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/esm/react-router-dom.js\");\n/* harmony import */ var _utils_context__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/context */ \"./src/utils/context.js\");\nfunction _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }\n\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\n\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\n\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }\n\nfunction _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== \"undefined\" && arr[Symbol.iterator] || arr[\"@@iterator\"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"] != null) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; }\n\nfunction _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }\n\n\n\n\n\nfunction Card(_ref) {\n  var card = _ref.card,\n      onUpdatePokemon = _ref.onUpdatePokemon;\n  var currentPokemon = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_utils_context__WEBPACK_IMPORTED_MODULE_1__.default);\n\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),\n      _useState2 = _slicedToArray(_useState, 2),\n      iscaught = _useState2[0],\n      setIsCaught = _useState2[1];\n\n  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {\n    setIsCaught(currentPokemon.status);\n  }, [currentPokemon.status]);\n\n  function handleClick(e) {\n    e.target.textContent = 'Caught';\n    setIsCaught(!iscaught);\n    onUpdatePokemon({\n      status: 'isCaught'\n    });\n  }\n\n  ;\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"element__container\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {\n    to: \"/pokemon/\".concat(card.id)\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"img\", {\n    className: \"element__pic\",\n    src: \"<%=require{`../images/pokemons/${card.id}.png`}%>\",\n    alt: card.name\n  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"h2\", {\n    className: \"element__title\"\n  }, card.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"button\", {\n    type: \"button\",\n    \"aria-label\": \"Catch pokemon\",\n    onClick: handleClick,\n    disabled: iscaught,\n    className: \"element__button\"\n  }, \"Catch\"));\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Card);\n\n//# sourceURL=webpack://pokedex/./src/component/Card.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/esm/react-router-dom.js\");\n/* harmony import */ var _utils_context__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/context */ \"./src/utils/context.js\");\nfunction _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }\n\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\n\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\n\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }\n\nfunction _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== \"undefined\" && arr[Symbol.iterator] || arr[\"@@iterator\"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"] != null) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; }\n\nfunction _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }\n\n\n\n\n\nfunction Card(_ref) {\n  var card = _ref.card,\n      onUpdatePokemon = _ref.onUpdatePokemon;\n\n  var image = __webpack_require__(\"./public/pokemons sync recursive ^\\\\.\\\\/.*\\\\.png$\")(\"./\".concat(card.id, \".png\"));\n\n  var currentPokemon = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_utils_context__WEBPACK_IMPORTED_MODULE_1__.default);\n\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),\n      _useState2 = _slicedToArray(_useState, 2),\n      iscaught = _useState2[0],\n      setIsCaught = _useState2[1];\n\n  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {\n    setIsCaught(currentPokemon.status);\n  }, [currentPokemon.status]);\n\n  function handleClick(e) {\n    e.target.textContent = 'Caught';\n    setIsCaught(!iscaught);\n    onUpdatePokemon({\n      status: 'isCaught'\n    });\n  }\n\n  ;\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    className: \"element__container\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {\n    to: \"/pokemon/\".concat(card.id)\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"img\", {\n    className: \"element__pic\",\n    src: \"../../pokemons/\".concat(card.id, \".png\"),\n    alt: card.name\n  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"h2\", {\n    className: \"element__title\"\n  }, card.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"button\", {\n    type: \"button\",\n    \"aria-label\": \"Catch pokemon\",\n    onClick: handleClick,\n    disabled: iscaught,\n    className: \"element__button\"\n  }, \"Catch\"));\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Card);\n\n//# sourceURL=webpack://pokedex/./src/component/Card.jsx?");
 
 /***/ }),
 
@@ -662,7 +662,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\n\nfunction CaughtPokemons(_ref) {\n  var pokemons = _ref.pokemons;\n  var filterPokemon = pokemons.filter(function (pokemon) {\n    return pokemon.status;\n  });\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"section\", {\n    className: \"elements\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"h2\", {\n    className: \"elements__title\"\n  }, \"My Pokedex\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"ul\", {\n    className: \"element\"\n  }, filterPokemon.map(function (pokemon, i) {\n    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"li\", {\n      className: \"element__card\",\n      key: pokemon.id\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n      className: \"element__container\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"img\", {\n      className: \"element__pic\",\n      src: \"./pokemons/\".concat(pokemon.id, \".png\"),\n      alt: pokemon.name\n    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"h2\", {\n      className: \"element__title\"\n    }, pokemon.name)));\n  })));\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CaughtPokemons);\n\n//# sourceURL=webpack://pokedex/./src/component/CaughtPokemons.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\n\n\nfunction CaughtPokemons(_ref) {\n  var pokemons = _ref.pokemons;\n  var filterPokemon = pokemons.filter(function (pokemon) {\n    return pokemon.status;\n  });\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"section\", {\n    className: \"elements\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"h2\", {\n    className: \"elements__title\"\n  }, \"My Pokedex\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"ul\", {\n    className: \"element\"\n  }, filterPokemon.map(function (pokemon, i) {\n    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"li\", {\n      className: \"element__card\",\n      key: pokemon.id\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n      className: \"element__container\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"img\", {\n      className: \"element__pic\",\n      src: \"../../pokemons/\".concat(pokemon.id, \".png\"),\n      alt: pokemon.name\n    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"h2\", {\n      className: \"element__title\"\n    }, pokemon.name)));\n  })));\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CaughtPokemons);\n\n//# sourceURL=webpack://pokedex/./src/component/CaughtPokemons.jsx?");
 
 /***/ }),
 
@@ -673,7 +673,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Footer)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _public_pokemons_pokeball_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../public/pokemons/pokeball.svg */ \"./public/pokemons/pokeball.svg\");\n\n\nfunction Footer() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"footer\", {\n    className: \"footer\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"p\", {\n    className: \"footer__copyrigth\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"img\", {\n    alt: \"Pokemon logotype\",\n    src: _public_pokemons_pokeball_svg__WEBPACK_IMPORTED_MODULE_1__\n  })));\n}\n\n//# sourceURL=webpack://pokedex/./src/component/Footer.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Footer)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nfunction Footer() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"footer\", {\n    className: \"footer\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"p\", {\n    className: \"footer__copyrigth\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"img\", {\n    alt: \"Pokemon logotype\",\n    src: '../../pokemons/pokeball.svg'\n  })));\n}\n\n//# sourceURL=webpack://pokedex/./src/component/Footer.jsx?");
 
 /***/ }),
 
@@ -798,6 +798,7926 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./public/pokemons/1.png":
+/*!*******************************!*\
+  !*** ./public/pokemons/1.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"c4cf2c999e380bdbd21c.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/1.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/10.png":
+/*!********************************!*\
+  !*** ./public/pokemons/10.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"2fb68ab4d7c9430c0cec.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/10.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/100.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/100.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"bc48fefc6ec84c972587.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/100.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/101.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/101.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"feeb89ee30231a7a7d7b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/101.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/102.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/102.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"2347134c5ba7e5ea3954.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/102.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/103.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/103.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"298bf0925ddb7d04c1b8.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/103.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/104.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/104.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"5226aaa237926266772b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/104.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/105.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/105.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"03e60754cb526c892de5.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/105.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/106.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/106.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"c69d0ebd8755173b7d08.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/106.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/107.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/107.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"316be2386a9d54b15bd8.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/107.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/108.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/108.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"f6490016e8beca45afd0.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/108.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/109.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/109.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"50ed090bf3212abf8478.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/109.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/11.png":
+/*!********************************!*\
+  !*** ./public/pokemons/11.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b7e0bf20498eb439d579.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/11.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/110.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/110.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9252b13957a49512dddc.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/110.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/111.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/111.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"6da3df23dab93ae08b8c.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/111.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/112.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/112.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"7efb54b05ac083968e02.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/112.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/113.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/113.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"35b14816ca65ebfb1763.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/113.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/114.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/114.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"75446ae273bd055efeca.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/114.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/115.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/115.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"3938e78f87adb7264d90.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/115.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/116.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/116.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"88060fdaebe1d1aa6df0.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/116.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/117.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/117.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"2e9e9c722ac9a6a0736f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/117.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/118.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/118.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b93239cc59110a11d81d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/118.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/119.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/119.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b7646fb6a3f3b9c3e806.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/119.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/12.png":
+/*!********************************!*\
+  !*** ./public/pokemons/12.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"e86898359ce3ffb19166.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/12.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/120.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/120.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"a199e365217ae249b3ce.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/120.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/121.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/121.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d28a5f4f48859263f2a7.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/121.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/122.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/122.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"4cfc353e9ccae011cbba.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/122.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/123.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/123.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"a1b455e2333e58f79494.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/123.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/124.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/124.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"60a228c54280e74e9acc.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/124.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/125.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/125.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9f4fa04c47f47a791094.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/125.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/126.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/126.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0c8bfc967c766e4b4720.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/126.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/127.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/127.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"dca93e41a5994da2353f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/127.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/128.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/128.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"1eaf8ca04f08a2eb70fc.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/128.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/129.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/129.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d45a66fca68574c3be58.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/129.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/13.png":
+/*!********************************!*\
+  !*** ./public/pokemons/13.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d7ad4cec4e19ecb6b309.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/13.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/130.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/130.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"2b6cebdfec0c394ea229.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/130.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/131.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/131.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"f6c3105b7e2bd605973f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/131.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/132.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/132.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"3518d065cd8ecc94c594.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/132.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/133.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/133.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"bb10bb95a7e78d8e4123.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/133.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/134.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/134.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"f9a3c7e207e27576480b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/134.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/135.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/135.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"daf5b9a1053a3243981d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/135.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/136.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/136.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"c4d0256db7c56a9f1620.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/136.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/137.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/137.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"5d5f561ddf18c21830d4.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/137.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/138.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/138.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ce7236a9a2edeaae23c0.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/138.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/139.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/139.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"7e81537c6ba427213677.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/139.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/14.png":
+/*!********************************!*\
+  !*** ./public/pokemons/14.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0ef09b346673663c49fb.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/14.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/140.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/140.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"4945a1ade6fe9a91728d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/140.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/141.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/141.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"c815f031aa844790c997.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/141.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/142.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/142.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ef7044df2014ca91885b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/142.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/143.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/143.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"39beb284230814fa144c.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/143.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/144.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/144.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"890644eb24edd4864919.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/144.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/145.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/145.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"57d8e0b27748f4970034.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/145.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/146.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/146.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"bfc3e31344d3dd2bd36c.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/146.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/147.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/147.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"24fa6f45f00f420d60b2.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/147.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/148.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/148.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"7cea1f80c27f3a03c948.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/148.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/149.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/149.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"cf1817dd34c6ae912c10.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/149.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/15.png":
+/*!********************************!*\
+  !*** ./public/pokemons/15.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"056d71fa6bd7b6312dfa.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/15.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/150.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/150.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"77cd84225a06a5cd589f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/150.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/151.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/151.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"7d49ed42859294bf9626.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/151.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/152.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/152.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"777168df9e8593593b82.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/152.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/153.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/153.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"364915d93d697377e65a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/153.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/154.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/154.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"cf87fbc6199d2dc84a20.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/154.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/155.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/155.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"f68c46121573c541c567.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/155.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/156.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/156.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"136f2f53739ff4601ebb.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/156.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/157.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/157.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9441bd1902356eb1ba01.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/157.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/158.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/158.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9bf4759f661d760c7150.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/158.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/159.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/159.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"42a167759b3742d97690.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/159.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/16.png":
+/*!********************************!*\
+  !*** ./public/pokemons/16.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"dec9e35de677086f4eb1.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/16.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/160.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/160.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"54b1decfc512a30c184a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/160.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/161.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/161.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"36749c4d7f61dfa3560a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/161.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/162.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/162.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"a7b222d7787265ab9d28.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/162.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/163.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/163.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"52654d2ad7e4052727d2.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/163.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/164.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/164.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"64426a6df2ed6ce47533.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/164.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/165.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/165.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"e662a4d491e4024b4701.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/165.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/166.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/166.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ad35af68db064e247e9a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/166.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/167.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/167.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"5c99114017b8f6ce44f6.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/167.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/168.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/168.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"e2a49eb0f04800b396aa.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/168.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/169.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/169.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"f9f5a94013e546a8924d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/169.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/17.png":
+/*!********************************!*\
+  !*** ./public/pokemons/17.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"1372cedd33fb7f570e56.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/17.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/170.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/170.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"50834e0642a4f6954701.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/170.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/171.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/171.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"bd16f16dafec8fac1ff8.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/171.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/172.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/172.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"1ae88d54ee2374bd08d9.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/172.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/173.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/173.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"e74d0eb4ab7893283d9a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/173.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/174.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/174.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b44cfb8d724f099db7d5.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/174.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/175.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/175.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"c0d963ebb1018d9cd4de.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/175.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/176.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/176.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"96931352ba55b5c5457e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/176.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/177.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/177.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9f44ac033e30757cd72d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/177.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/178.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/178.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b81c79152be3f96f905a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/178.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/179.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/179.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"86f8f700d89a61bcb5e8.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/179.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/18.png":
+/*!********************************!*\
+  !*** ./public/pokemons/18.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"131fd7477806cd6ba4f6.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/18.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/180.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/180.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ebce73639d0af27cbb1a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/180.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/181.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/181.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"db40711439af9abc4e09.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/181.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/182.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/182.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"657f900cd528b2b4c987.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/182.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/183.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/183.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"30b813aff76f0da3432c.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/183.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/184.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/184.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"e994226f55aa115f45cc.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/184.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/185.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/185.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"77f93a82f64524d0e346.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/185.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/186.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/186.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"034ac1091bbec1735531.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/186.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/187.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/187.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"5f60fc0daf76effbbe45.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/187.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/188.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/188.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"4d23354d90ac8e66e420.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/188.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/189.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/189.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d14e1f53250bd2439b2d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/189.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/19.png":
+/*!********************************!*\
+  !*** ./public/pokemons/19.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9a6aac2f8ca371b9f532.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/19.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/190.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/190.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"50790f4eaf18a60ed7c2.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/190.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/191.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/191.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"4ac9c1b643acc03d07da.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/191.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/192.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/192.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"03672142cdb23eec7961.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/192.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/193.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/193.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"352e4e7b2d118a7ae02d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/193.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/194.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/194.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"f6834d5ba9b5492830a2.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/194.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/195.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/195.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"85fb33f97e7db26386f8.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/195.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/196.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/196.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"6027a131b33a95631b37.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/196.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/197.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/197.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"e70c18ab76174a41fa40.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/197.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/198.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/198.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"aafae5f5c4b9b24219a8.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/198.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/199.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/199.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"e8c17594f8276841ebc7.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/199.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/2.png":
+/*!*******************************!*\
+  !*** ./public/pokemons/2.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ad6794bb2b32b1509a45.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/2.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/20.png":
+/*!********************************!*\
+  !*** ./public/pokemons/20.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"4f14055cd441186c5db4.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/20.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/200.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/200.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"4ff8350b4f6762f5b5e6.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/200.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/201.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/201.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b3a767aff7df6ab4f57e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/201.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/202.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/202.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"8fb5c267903ce941c2f9.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/202.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/203.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/203.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"e9167d3b7d849ec6564f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/203.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/204.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/204.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"f8f1619700065b137f07.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/204.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/205.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/205.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"5bdd9c1ce6cb078ec674.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/205.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/206.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/206.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ee52c065345fe0c1c02d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/206.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/207.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/207.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d284b538de8dcffc3799.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/207.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/208.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/208.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"8fb8d8f24d8757250c4a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/208.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/209.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/209.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"c812c85556a19615db69.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/209.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/21.png":
+/*!********************************!*\
+  !*** ./public/pokemons/21.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"a843db4d690a00a0b2e3.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/21.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/210.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/210.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"7a8d1050597781590148.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/210.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/211.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/211.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9dfb2745518910f94503.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/211.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/212.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/212.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"170b3e786eb73c65325f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/212.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/213.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/213.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"4e98c732db2aa2d8ca0d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/213.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/214.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/214.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"76d9eb52943da5eb3f9b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/214.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/215.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/215.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"6c1b3959fe77d80ea556.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/215.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/216.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/216.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"f3b2c79d796e0cb36153.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/216.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/217.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/217.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ef9359821cd0d338c277.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/217.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/218.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/218.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"346cc0cbf0fc08c827ae.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/218.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/219.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/219.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"70ae54c76055315eda68.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/219.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/22.png":
+/*!********************************!*\
+  !*** ./public/pokemons/22.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"6fa0654fedf70b3023a1.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/22.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/220.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/220.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"f203abafcfeed2634c70.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/220.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/221.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/221.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"4c37c52781261e467bf0.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/221.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/222.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/222.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b7775f66dd086b5b1101.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/222.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/223.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/223.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d25a9dbaaf98e09cd96a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/223.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/224.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/224.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"90124c98adfc699c7647.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/224.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/225.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/225.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9b33ee823dd4182ba4fa.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/225.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/226.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/226.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"e6a862cc2b404d063f2e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/226.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/227.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/227.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"5d84dfbeb096df03963e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/227.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/228.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/228.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"be06694ab5b5dc1e546a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/228.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/229.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/229.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"21c76c333950bdfaf8f3.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/229.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/23.png":
+/*!********************************!*\
+  !*** ./public/pokemons/23.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d27d5ec0f335227e1f6b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/23.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/230.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/230.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"a30c28391256ee3cf04a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/230.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/231.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/231.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b5a568bcee3f5216c801.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/231.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/232.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/232.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"7b46cf57d20adf784665.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/232.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/233.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/233.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"8565e53ecdbc34e2af08.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/233.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/234.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/234.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"5ec4869d010aa0a2f936.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/234.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/235.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/235.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"88e977a7a29d89794589.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/235.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/236.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/236.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"c5ffb762f989b76549ef.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/236.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/237.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/237.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"4500e714af6ff58593e3.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/237.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/238.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/238.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"c82587444fa370d921d9.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/238.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/239.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/239.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"5f763d3486b73e690736.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/239.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/24.png":
+/*!********************************!*\
+  !*** ./public/pokemons/24.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"e1f5437061ed7be8b128.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/24.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/240.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/240.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"2c43f7b66df735e74969.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/240.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/241.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/241.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"261e0f91dc6bf5483efb.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/241.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/242.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/242.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"44d06b66e8ed019622e9.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/242.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/243.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/243.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"4963551a708e74554cf5.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/243.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/244.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/244.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"108adc63a80b5cf7b483.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/244.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/245.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/245.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ee130623224e4b194a64.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/245.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/246.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/246.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9e022de0ae91f812885e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/246.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/247.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/247.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"8dcda1229d6f35a21ba5.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/247.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/248.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/248.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"15b74a7194cd04926733.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/248.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/249.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/249.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"39b0de0ef569286d36f9.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/249.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/25.png":
+/*!********************************!*\
+  !*** ./public/pokemons/25.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"71554121a0206a817e6f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/25.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/250.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/250.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"6e4f46790a6055be8448.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/250.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/251.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/251.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"27349fc1407dcd4c0a12.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/251.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/252.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/252.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"577a48e7c7f4e4398571.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/252.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/253.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/253.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"83504566ec288edd40d9.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/253.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/254.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/254.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b3e4bf234b909d5d0ca4.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/254.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/255.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/255.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"79d1735dba9b58c91b35.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/255.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/256.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/256.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"3b702a5f5b686fe5a350.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/256.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/257.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/257.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"10366bcfeb3bf8c4af22.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/257.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/258.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/258.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"c31012ae5feee5b273a3.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/258.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/259.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/259.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"8fe2ecab620d1026f9af.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/259.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/26.png":
+/*!********************************!*\
+  !*** ./public/pokemons/26.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"46be05fe929577c92cb0.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/26.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/260.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/260.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"c70d61f3c37d3333fd3f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/260.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/261.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/261.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"a8b2040e55cf1ebefcf6.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/261.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/262.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/262.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"602cafd08170532b093d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/262.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/263.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/263.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d4080a0e2013fd9143cc.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/263.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/264.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/264.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"84468168102235dc1d79.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/264.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/265.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/265.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9e5172c1101bf451c60d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/265.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/266.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/266.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"f7a262cd937cdc7f31e0.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/266.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/267.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/267.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"e48bf01f146ae36c93d7.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/267.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/268.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/268.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b49859c20149779a9ff4.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/268.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/269.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/269.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"2067d2c5894398545e02.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/269.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/27.png":
+/*!********************************!*\
+  !*** ./public/pokemons/27.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"6f9db4dbf972693fcc52.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/27.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/270.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/270.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"fc659c904884e9607f38.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/270.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/271.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/271.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"8f9b142f849493e19f67.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/271.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/272.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/272.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"2bbc11f7c5987a404608.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/272.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/273.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/273.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"3e9814a04c05bbc02375.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/273.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/274.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/274.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d3fc15262771d2378092.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/274.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/275.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/275.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b12b51fe81f4bc46ea32.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/275.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/276.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/276.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"64fe867bc9079829fefd.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/276.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/277.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/277.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"392ac26312b61a23d47a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/277.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/278.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/278.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b7a6c807252ce7f7d6a9.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/278.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/279.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/279.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"5141b7c839ffb183d069.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/279.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/28.png":
+/*!********************************!*\
+  !*** ./public/pokemons/28.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"53bf39fe0a9b06dfc43d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/28.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/280.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/280.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"952768caf8e4b29c2ccd.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/280.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/281.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/281.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"233852d5df04e1ea6a46.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/281.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/282.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/282.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"6e6406813b637eb4da5e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/282.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/283.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/283.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"2cac1c1845115d02a00b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/283.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/284.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/284.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"12e77190dd9f4e5bfbde.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/284.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/285.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/285.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"88a4acf7663f66739b1e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/285.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/286.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/286.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"40ddd9e51c684fc3a880.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/286.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/287.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/287.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"961491817891d2b83a3b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/287.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/288.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/288.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"5972e36a797cdcbb4732.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/288.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/289.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/289.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"8441069f17f44cbc2fd7.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/289.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/29.png":
+/*!********************************!*\
+  !*** ./public/pokemons/29.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"6f7ee2d4f213aed7c4a2.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/29.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/290.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/290.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"dc70797da3ebfb98c923.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/290.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/291.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/291.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d996cdc5ce945077ad0b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/291.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/292.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/292.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"82593bce20555057893a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/292.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/293.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/293.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"f28cbb75aa1c66f6187f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/293.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/294.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/294.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b3132e77cf189da41c05.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/294.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/295.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/295.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"bf83a876a1f50858842b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/295.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/296.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/296.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"c0c876eb4215b3f6539e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/296.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/297.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/297.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"39da74ca9475da8e9443.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/297.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/298.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/298.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"02691cca7ec9a953b143.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/298.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/299.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/299.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ae8ee3dfc8f0a0821757.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/299.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/3.png":
+/*!*******************************!*\
+  !*** ./public/pokemons/3.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"fc16447d94cf8b53cc23.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/3.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/30.png":
+/*!********************************!*\
+  !*** ./public/pokemons/30.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"65bdb2d820fc172b70ad.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/30.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/300.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/300.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9ca36e6897ccae6c8e8b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/300.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/301.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/301.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"2d79d7f0964eef96dfab.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/301.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/302.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/302.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"06c3c09f10b2f193cd85.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/302.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/303.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/303.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"c531325fb003ea8b73c5.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/303.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/304.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/304.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"c057b2fe839e19af6c89.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/304.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/305.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/305.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ef3bd2f1b9f88af7521e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/305.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/306.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/306.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9b0e1f31db41a9d5462d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/306.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/307.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/307.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"1f0cfbfd77e0010199f7.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/307.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/308.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/308.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"4de21899e925f013de81.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/308.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/309.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/309.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ddd16893f166ecd10fd6.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/309.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/31.png":
+/*!********************************!*\
+  !*** ./public/pokemons/31.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b05feae1b799470c1627.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/31.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/310.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/310.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ae9243044274785d0693.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/310.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/311.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/311.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"8b38aced23f40c9eab1f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/311.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/312.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/312.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"bee894e981ae24c65cdf.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/312.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/313.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/313.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"8c799763dd9450840862.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/313.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/314.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/314.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ea44d822ac8408735586.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/314.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/315.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/315.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"bc8548df1ec5f115c74c.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/315.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/316.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/316.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"1491b155cb5c4b50083c.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/316.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/317.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/317.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"3ca3be8789483d98b68c.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/317.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/318.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/318.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"cd803b9ac076a415cd1a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/318.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/319.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/319.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0338e013cc1567e47adf.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/319.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/32.png":
+/*!********************************!*\
+  !*** ./public/pokemons/32.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b01cd83ec43d4512dfb1.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/32.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/320.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/320.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"96484645922991cbc64c.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/320.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/321.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/321.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"4bfc4147e626724f3410.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/321.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/322.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/322.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"60c6bc3aac8f4b93ae97.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/322.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/323.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/323.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"f9e54faf09a2510f00e9.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/323.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/324.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/324.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"8f4d2a2a3df9119068a4.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/324.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/325.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/325.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b1eaf96c5d06944bb5ae.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/325.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/326.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/326.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"3a851ff03da3890f717c.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/326.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/327.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/327.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ed621458b88bbb2d54c5.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/327.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/328.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/328.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"7370100f40da1d4ffaca.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/328.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/329.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/329.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"12e5ea8f144a83bf08a9.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/329.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/33.png":
+/*!********************************!*\
+  !*** ./public/pokemons/33.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"29e288353572f876040f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/33.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/330.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/330.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"6618bf93f36bcac554fa.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/330.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/331.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/331.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"19aa6ca14f7ba626d441.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/331.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/332.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/332.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"a7ccfea9a8aafc82c1de.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/332.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/333.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/333.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"a938fd9c7a97d635cd3b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/333.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/334.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/334.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0bf1199bc99aa60a6de3.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/334.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/335.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/335.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"5b06b892b5014fc36022.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/335.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/336.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/336.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"87d4766abc2e342f4df1.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/336.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/337.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/337.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"a92abd9825b96675f54f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/337.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/338.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/338.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"8cc6ab1ec3d68b3b617f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/338.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/339.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/339.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"01916902f3703f65d266.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/339.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/34.png":
+/*!********************************!*\
+  !*** ./public/pokemons/34.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9bf9aebf0f6786fc8fa5.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/34.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/340.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/340.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ff1f0ee157b93d0398e1.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/340.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/341.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/341.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"be1e19d1cb33f99ba784.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/341.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/342.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/342.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"383d78ef0efacf1b0d58.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/342.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/343.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/343.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"05e525e1d45caf72a52c.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/343.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/344.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/344.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"4e860d102b7fad694278.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/344.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/345.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/345.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"f7596af86654387c8578.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/345.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/346.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/346.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"6034828f2ad314725b94.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/346.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/347.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/347.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"73d8ecfcf625a328a06d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/347.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/348.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/348.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"32beedc23210c2bba81a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/348.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/349.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/349.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"4cda28b49d1d94fa4b81.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/349.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/35.png":
+/*!********************************!*\
+  !*** ./public/pokemons/35.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"4faf58facf88b74e72fb.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/35.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/350.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/350.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ccabd67fb55cd2ec0f1f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/350.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/351.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/351.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"57761143a29632790923.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/351.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/352.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/352.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9a28efe0f26af1d65b1b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/352.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/353.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/353.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"65c0e1785ca53ab8ea62.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/353.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/354.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/354.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"691b5b37e0970e753c62.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/354.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/355.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/355.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"4a25af3ea64fd47d4c19.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/355.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/356.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/356.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"19a186a54887db9ebda2.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/356.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/357.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/357.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9a32b33624e4f612a677.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/357.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/358.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/358.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b23c36ed61874b9f76c6.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/358.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/359.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/359.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"552e7ebac3083ca67fd9.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/359.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/36.png":
+/*!********************************!*\
+  !*** ./public/pokemons/36.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"e0aecc8478973c58fdad.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/36.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/360.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/360.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"bb614567c2053b8d3a91.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/360.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/361.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/361.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d762a505fbfdf84f60ed.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/361.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/362.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/362.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"094f06e716e59f0fc7bd.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/362.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/363.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/363.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"819b8893becb7038ffd2.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/363.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/364.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/364.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0e097224f8b9e9c10316.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/364.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/365.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/365.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"86bb3439e04ef726a531.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/365.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/366.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/366.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0ad78f21527c889311d2.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/366.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/367.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/367.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"6264e29b1590488482fa.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/367.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/368.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/368.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0f6c8445a836abd4de62.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/368.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/369.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/369.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"102eb2fe8ac4cba58c76.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/369.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/37.png":
+/*!********************************!*\
+  !*** ./public/pokemons/37.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"3c08bcb34420a8db0f6f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/37.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/370.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/370.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"a669dce986bb519ad240.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/370.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/371.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/371.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"058ff923da53afa625b0.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/371.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/372.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/372.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"e84d80e1b8bf53cb26fb.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/372.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/373.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/373.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"3a3e9aad56be4d293fac.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/373.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/374.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/374.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"994070d354e99394add7.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/374.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/375.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/375.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"fa173bf6632b9cd14483.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/375.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/376.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/376.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"f52113efcb4ab1b43b5f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/376.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/377.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/377.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"36632ba34d960260daf3.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/377.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/378.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/378.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"21d84e57f377d89b2d16.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/378.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/379.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/379.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"69584e66c1ce8a661c63.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/379.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/38.png":
+/*!********************************!*\
+  !*** ./public/pokemons/38.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"8130edba7f6cea19cfcc.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/38.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/380.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/380.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"4bbb17435b2eec08bab0.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/380.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/381.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/381.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"c5bb2fed90604a5f541f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/381.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/382.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/382.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0daa52d4699334cd33be.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/382.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/383.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/383.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"2f12b698880818d51ee8.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/383.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/384.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/384.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"aa4bbd0dd420276aba92.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/384.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/385.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/385.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"221679a033af97773899.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/385.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/386.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/386.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"6914c0f7d2b60a625392.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/386.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/387.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/387.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d56f5fbe5bb062943734.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/387.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/388.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/388.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"cf68984f31b614442e18.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/388.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/389.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/389.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"e7fde35bcb720fa3f2a4.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/389.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/39.png":
+/*!********************************!*\
+  !*** ./public/pokemons/39.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"292a44f122c7649e2bab.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/39.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/390.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/390.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"a761482096ac612ea25c.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/390.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/391.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/391.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"f5c6aa0693c2492ab53b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/391.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/392.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/392.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"f4fa668af183cb70e84e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/392.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/393.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/393.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"937fc373719ce910558d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/393.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/394.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/394.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"4ffbd7acd03a6210019d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/394.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/395.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/395.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"a90aadb9fb64cf2d4a83.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/395.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/396.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/396.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"cf24979fa06c05e170fc.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/396.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/397.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/397.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"47fe35b9024c9c418921.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/397.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/398.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/398.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"7cca9d8757897b8a4c4a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/398.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/399.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/399.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"23d4328e87bcdc639bab.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/399.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/4.png":
+/*!*******************************!*\
+  !*** ./public/pokemons/4.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b72d1c5498d6e5251c8e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/4.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/40.png":
+/*!********************************!*\
+  !*** ./public/pokemons/40.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"98eccd09b16bb3c0bdd5.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/40.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/400.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/400.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"e0029b094c630d4b2bcb.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/400.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/401.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/401.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"19146e9dd6eb9ea0e76b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/401.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/402.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/402.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"7569360859f460edff6b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/402.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/403.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/403.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"f5ef6159d9de2e032d9a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/403.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/404.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/404.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"daa56e92f74a7907bb0b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/404.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/405.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/405.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"1ad5a7b8409356885518.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/405.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/406.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/406.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"727671a558d159f33ee3.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/406.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/407.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/407.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ff6f1afbca3f54166502.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/407.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/408.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/408.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"7461162898f58ff2f69b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/408.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/409.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/409.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"f4ba0e55aa81d0f76c22.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/409.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/41.png":
+/*!********************************!*\
+  !*** ./public/pokemons/41.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b4ffa4066a7ab1ad028f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/41.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/410.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/410.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"71712c8f865b267e7c52.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/410.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/411.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/411.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"8edb5a0d575191414324.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/411.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/412.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/412.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"e48591e232d39eb63ee0.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/412.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/413.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/413.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"5dc32dbd1f90c931ee0f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/413.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/414.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/414.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d94d2b82067b03182c52.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/414.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/415.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/415.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"7ee478fd75ca46487c99.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/415.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/416.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/416.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d7af7b82206321e830dd.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/416.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/417.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/417.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"a8d453afbcee7e86d9c1.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/417.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/418.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/418.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"5d7f36e1c6384624b201.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/418.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/419.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/419.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"014375b9522ac5f430ac.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/419.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/42.png":
+/*!********************************!*\
+  !*** ./public/pokemons/42.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"1b8d1f0acd43b5f2b873.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/42.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/420.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/420.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"397a3e7d2ee32cc89790.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/420.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/421.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/421.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"83153cfb6e81bdacf4a2.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/421.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/422.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/422.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"fef4f8f1cc9e58011bf5.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/422.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/423.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/423.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"aa6dc52f0c3a23529c36.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/423.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/424.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/424.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"6aee5803ad30ff17e4b5.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/424.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/425.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/425.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b1a84de285751c28d9a5.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/425.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/426.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/426.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"2088c2443a7fce3a16f6.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/426.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/427.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/427.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"2c35873d8972c6dca245.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/427.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/428.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/428.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"c78dc3d7ecea0329a072.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/428.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/429.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/429.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b26b14197420f9583aef.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/429.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/43.png":
+/*!********************************!*\
+  !*** ./public/pokemons/43.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"552edacf9c9a41be6dcd.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/43.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/430.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/430.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"54b16f034ea268549677.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/430.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/431.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/431.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"155ce19102604ec7737d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/431.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/432.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/432.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"067c8d77980eaabebd8c.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/432.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/433.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/433.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"be9313bcd6baebebf37c.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/433.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/434.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/434.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"2bf6e5917bc57263e583.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/434.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/435.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/435.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"e06f4afd05e7c975c811.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/435.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/436.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/436.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"197425cc5cda1ad4dc85.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/436.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/437.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/437.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"db46e10fdb8059067421.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/437.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/438.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/438.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9039e334641ffb22b9c1.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/438.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/439.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/439.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"64fcf506de272fe096a1.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/439.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/44.png":
+/*!********************************!*\
+  !*** ./public/pokemons/44.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"62a27d851123d78d81e9.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/44.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/440.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/440.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"23a68bab207f179198d0.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/440.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/441.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/441.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"45698e5f99c6cc07e4af.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/441.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/442.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/442.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ba5b5740e6d4479aeddb.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/442.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/443.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/443.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"cb61cec399ce4be47ccc.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/443.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/444.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/444.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"bde57fd6f72de3cfca73.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/444.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/445.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/445.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"94077666dabd321ee6aa.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/445.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/446.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/446.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"673949e4a14271c0f12a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/446.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/447.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/447.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"8740a5607e300ec49729.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/447.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/448.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/448.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"f52535078da592ab758b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/448.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/449.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/449.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d19230a1b115bf982303.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/449.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/45.png":
+/*!********************************!*\
+  !*** ./public/pokemons/45.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"627b466e26e3aebba07a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/45.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/450.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/450.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"837709d2e05ead5c8b4a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/450.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/451.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/451.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"4930b06197e2f3313969.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/451.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/452.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/452.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"836623563e855803ee0c.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/452.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/453.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/453.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"7c3f1a56d3bc68737372.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/453.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/454.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/454.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"8831da2fe1c1ced81d50.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/454.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/455.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/455.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"a972cd153b3eb1dabf87.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/455.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/456.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/456.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"6c1c37c06711f0ee3f50.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/456.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/457.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/457.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"3d569b65671ecff1b1e5.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/457.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/458.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/458.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"e5c5e629729a5426efbe.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/458.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/459.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/459.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"91b8a759579add3a90ad.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/459.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/46.png":
+/*!********************************!*\
+  !*** ./public/pokemons/46.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"3d0b08bc4a695e84df83.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/46.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/460.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/460.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"694d7b916851f10e89e9.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/460.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/461.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/461.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"2e6314c4bc831acdab18.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/461.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/462.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/462.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"1340663ab51b19cff440.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/462.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/463.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/463.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0b883ff7c528b57a270d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/463.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/464.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/464.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"04e5fbacad2c9cb7bd54.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/464.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/465.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/465.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"c16e3c0018057a613f9c.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/465.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/466.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/466.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"287f685779d4ee359fc6.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/466.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/467.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/467.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0ccff78c2f9399603c57.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/467.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/468.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/468.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"59c46d7e0b42a377db21.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/468.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/469.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/469.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"157411b1122fc2f64d19.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/469.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/47.png":
+/*!********************************!*\
+  !*** ./public/pokemons/47.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"f845590c29ae41ae34f3.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/47.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/470.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/470.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"caf061a9b6551ad831ed.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/470.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/471.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/471.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"20a1357ff32feaf0e170.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/471.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/472.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/472.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"8335ef3222e9bc187cb0.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/472.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/473.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/473.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0b9951fc4fbcc5297b98.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/473.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/474.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/474.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"5ea809229c285b6c8cf8.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/474.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/475.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/475.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"01e6701a98383c806c73.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/475.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/476.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/476.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"44b60ddeb1f9ffe7c8eb.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/476.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/477.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/477.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"162785678b357942d823.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/477.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/478.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/478.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0e9515a17d12e1cc3bca.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/478.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/479.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/479.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"4eb6eaa3fd8f9c97b211.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/479.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/48.png":
+/*!********************************!*\
+  !*** ./public/pokemons/48.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"efafa3b2292e926a5f63.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/48.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/480.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/480.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"dd482bee6da387cf73e7.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/480.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/481.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/481.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d8597a92e707e43d3767.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/481.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/482.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/482.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"6f83d0efe2183a697780.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/482.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/483.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/483.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0b81b3ddb1592c9222ae.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/483.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/484.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/484.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"76e02fe7425621743bcc.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/484.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/485.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/485.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"27cbf571501d02e58381.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/485.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/486.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/486.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"7f8ab5390c673c389c76.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/486.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/487.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/487.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"5d6f4c844dc737bc1f6b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/487.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/488.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/488.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9969fbbdf3f9589661b9.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/488.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/489.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/489.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"e52b8e5bf3875f5490c5.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/489.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/49.png":
+/*!********************************!*\
+  !*** ./public/pokemons/49.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ff2a4c481d71ed5322f2.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/49.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/490.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/490.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9ed41f9cbcbbb0634c74.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/490.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/491.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/491.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"669ded4467439326a881.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/491.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/492.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/492.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b183fc935e703f3cd4e7.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/492.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/493.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/493.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9a07b5a8f23868559155.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/493.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/494.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/494.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"98a9019927a7879b2483.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/494.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/495.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/495.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0d26e788a7275b8ab8c8.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/495.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/496.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/496.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"7fe5c48d456904fbefe3.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/496.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/497.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/497.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"4323dd8d9d8bb7ec0c47.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/497.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/498.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/498.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"879968b84d2afad962b2.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/498.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/499.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/499.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b948cad2d5955330297e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/499.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/5.png":
+/*!*******************************!*\
+  !*** ./public/pokemons/5.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"6adf086b911774af2790.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/5.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/50.png":
+/*!********************************!*\
+  !*** ./public/pokemons/50.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ee7652799a77ddce7848.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/50.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/500.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/500.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"7d4fc584d8c0623c7b8e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/500.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/501.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/501.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"86b4908066b7a552920d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/501.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/502.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/502.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ee145c2f21018b576802.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/502.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/503.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/503.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"f583da43de88d7868281.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/503.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/504.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/504.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"1bc933c89d9c525f545d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/504.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/505.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/505.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"98163021af9e2e5d7d88.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/505.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/506.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/506.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"3b6a0fc8104e96da3709.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/506.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/507.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/507.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d5d8037baac865c9ee61.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/507.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/508.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/508.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"1924b95a3967380e9992.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/508.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/509.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/509.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b82496d64dad25196c08.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/509.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/51.png":
+/*!********************************!*\
+  !*** ./public/pokemons/51.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"2b2047829e72a7cd2c0d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/51.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/510.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/510.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"58b01624be6c9ce62dd8.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/510.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/511.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/511.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ccf75e1269bba6058700.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/511.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/512.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/512.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"98ddaaab7afa6474ff74.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/512.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/513.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/513.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"97f9da991dcd541cf691.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/513.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/514.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/514.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"8171ed80ae45cce2bedd.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/514.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/515.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/515.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"5f742bf9a965a97adf54.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/515.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/516.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/516.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b057a14066cf6cbb17db.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/516.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/517.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/517.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"e8c8611d141737c607e7.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/517.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/518.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/518.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"35a39b2811d9ba7d3346.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/518.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/519.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/519.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"7e0451df80e6629d5ee6.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/519.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/52.png":
+/*!********************************!*\
+  !*** ./public/pokemons/52.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"e3502f85dfda9e10e59e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/52.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/520.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/520.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"453629553f78dfb61c9e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/520.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/521.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/521.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9b6ad29a349b3670f532.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/521.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/522.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/522.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"262d310a88296fa30b46.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/522.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/523.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/523.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"472b3c05739a2f14f609.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/523.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/524.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/524.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b84cdaa2aedb1f348422.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/524.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/525.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/525.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9c4a646b976a28564a1a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/525.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/526.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/526.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"1bce2f3575d78d4019f8.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/526.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/527.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/527.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"17bcdc4add0ac4668bb7.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/527.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/528.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/528.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"a624bcb6a57c727175a5.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/528.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/529.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/529.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"626f97009c4ad8a08e13.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/529.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/53.png":
+/*!********************************!*\
+  !*** ./public/pokemons/53.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"621c847e54fc2bc96d38.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/53.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/530.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/530.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"955ead88ac21076a62b0.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/530.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/531.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/531.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"1e929b00a272f88cf1ed.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/531.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/532.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/532.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"49f95c3a5377e9e5dc11.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/532.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/533.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/533.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0c571470eee2116561d7.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/533.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/534.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/534.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"502d8d494480fc0bdc94.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/534.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/535.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/535.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"440f1d998c725992672e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/535.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/536.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/536.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"48ebe6d0e44c9e448745.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/536.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/537.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/537.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"6253832755944698335a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/537.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/538.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/538.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"25b79f4e635bd949fb17.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/538.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/539.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/539.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"7ac51d13b54bd48373e9.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/539.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/54.png":
+/*!********************************!*\
+  !*** ./public/pokemons/54.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b05f37c178444e914163.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/54.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/540.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/540.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"03684d2558fda59a1f44.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/540.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/541.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/541.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"bc795508a8e8ac8778e3.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/541.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/542.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/542.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"62941c53c5aaac90222c.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/542.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/543.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/543.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0e5625eeefec81411c1f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/543.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/544.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/544.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"78d00892a742005e63c5.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/544.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/545.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/545.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"7bcc223b4bc904ca6e90.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/545.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/546.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/546.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"f95024fdc4f7d972ebee.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/546.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/547.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/547.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"c34f5f71c14ba2b69894.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/547.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/548.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/548.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"509b9d41bdfad9bb5318.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/548.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/549.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/549.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"489f208da836e098c65a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/549.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/55.png":
+/*!********************************!*\
+  !*** ./public/pokemons/55.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"7bc9406d4ac88c70719e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/55.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/550.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/550.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"1a31d27c87bd255413c1.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/550.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/551.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/551.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"bf9eaceb81dd6778210c.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/551.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/552.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/552.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"33d974ba5999ec09e68d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/552.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/553.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/553.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"93a01712119e139dbcf2.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/553.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/554.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/554.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"7150480340c66caa6d0d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/554.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/555.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/555.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d522aa89e80837723648.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/555.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/556.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/556.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ff5e63cb253c2db253c3.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/556.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/557.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/557.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0a810ee1ca85d4a4cb16.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/557.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/558.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/558.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0a7c44881cabc217bba5.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/558.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/559.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/559.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"6164ba66cd6630ce2fff.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/559.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/56.png":
+/*!********************************!*\
+  !*** ./public/pokemons/56.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"53e413690fc867458d09.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/56.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/560.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/560.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"7616810bb5aeebd40e48.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/560.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/561.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/561.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"66e2d2bc0fe664a1d0dc.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/561.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/562.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/562.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"c04359309d0245031d01.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/562.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/563.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/563.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"2aca71fe944929e8affe.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/563.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/564.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/564.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b46260fae5d2c55fa8ae.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/564.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/565.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/565.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"64220d804b21531663d0.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/565.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/566.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/566.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"eec858eb91f039c2474a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/566.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/567.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/567.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"4dcc08373227476c77f5.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/567.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/568.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/568.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"84f49a9faedcf0623f82.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/568.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/569.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/569.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0f5dcbae2ee41fab73bf.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/569.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/57.png":
+/*!********************************!*\
+  !*** ./public/pokemons/57.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0ed273dcacd74fff9554.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/57.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/570.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/570.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9e8613c228922cf2ba1d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/570.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/571.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/571.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"3c9262ab8f7464dbd2cc.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/571.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/572.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/572.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"756d991d7773b188b0fe.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/572.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/573.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/573.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"f4320af92cee643f2c29.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/573.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/574.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/574.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"db27eadc5426e81141db.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/574.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/575.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/575.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"6d67fa7c41c24dda2088.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/575.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/576.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/576.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"3f915e9e3189f4ca1be5.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/576.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/577.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/577.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"fe7be7386d777bbd7d53.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/577.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/578.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/578.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"4946c4822203563869b0.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/578.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/579.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/579.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"23cb71fcaccd2b7a678a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/579.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/58.png":
+/*!********************************!*\
+  !*** ./public/pokemons/58.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"fc88b042957e56210bae.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/58.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/580.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/580.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"64b20450791f5e393b41.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/580.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/581.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/581.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"854302b3438be192c583.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/581.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/582.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/582.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"5fa7ecc8aa103b44e181.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/582.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/583.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/583.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"817fb95976f7522f8e55.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/583.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/584.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/584.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"413b099eb88046fefd41.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/584.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/585.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/585.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0bf9f88900ada9b7d486.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/585.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/586.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/586.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"e7c6ab7a80da7b1a15b6.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/586.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/587.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/587.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"6f32ba0bac43f650d086.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/587.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/588.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/588.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"5c9ca0626f18ff6fb1b6.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/588.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/589.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/589.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"60b69e7b7ba8e9291b14.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/589.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/59.png":
+/*!********************************!*\
+  !*** ./public/pokemons/59.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"36dba427ccadf8702250.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/59.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/590.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/590.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"95eb9c1f7ef6ad5cd71d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/590.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/591.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/591.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"1484eb2cd42d53b7fe51.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/591.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/592.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/592.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"965a66b42c19e7b9ba9e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/592.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/593.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/593.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"41330c6f1f82a841e695.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/593.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/594.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/594.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"2c3ac8be7f3e625a0513.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/594.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/595.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/595.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"1d8ef220d20f2bc5fe97.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/595.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/596.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/596.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"29ecb4cd02e121f21f23.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/596.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/597.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/597.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"db4d57a699a75cd7e8aa.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/597.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/598.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/598.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"04d0809282f44c95220b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/598.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/599.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/599.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"e1d19c54fa9597a262cb.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/599.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/6.png":
+/*!*******************************!*\
+  !*** ./public/pokemons/6.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"3e11fa1b9f6ab289e1dc.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/6.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/60.png":
+/*!********************************!*\
+  !*** ./public/pokemons/60.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"023678ae5d44131b1c2e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/60.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/600.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/600.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"138204a28b448f71f08d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/600.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/601.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/601.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"1a417f518b2cf2bd267f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/601.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/602.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/602.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"8e6960d8707b381649e1.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/602.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/603.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/603.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0b7f17f12c22b7ffd1a8.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/603.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/604.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/604.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"3886168b2e8a0fa8b11c.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/604.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/605.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/605.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"3bb2b5d116c2acce015e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/605.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/606.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/606.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"fac6b6ac1c59b02231dd.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/606.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/607.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/607.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"6f5c3764117f3ff40fa6.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/607.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/608.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/608.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0ec9d27408c8b8f8aeb6.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/608.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/609.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/609.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"cea779ec8ceee54a8f17.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/609.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/61.png":
+/*!********************************!*\
+  !*** ./public/pokemons/61.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"716f9c402ff724ad446c.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/61.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/610.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/610.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"65ca40a2e69f21bf39e2.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/610.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/611.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/611.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d4ea5cba616148321d9e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/611.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/612.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/612.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"376f8fdc3220b14ab5b0.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/612.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/613.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/613.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d18b8932520a4fc74d27.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/613.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/614.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/614.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"eff35a163be590bce97f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/614.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/615.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/615.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"62af00f9430ce4077d32.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/615.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/616.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/616.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"1f78d59dc79dff92a7e7.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/616.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/617.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/617.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"34c562e2e8a62944e63f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/617.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/618.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/618.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"5e7858aae50e30c0dd9a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/618.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/619.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/619.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"eadded22f68adb609fb3.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/619.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/62.png":
+/*!********************************!*\
+  !*** ./public/pokemons/62.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"c9878c850bf5df043d4b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/62.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/620.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/620.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0b356cc204aff7a8b6e5.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/620.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/621.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/621.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"6fec81efb490ff5a635b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/621.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/622.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/622.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9369cd40ede720596655.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/622.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/623.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/623.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"51db479032cbb4240c0f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/623.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/624.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/624.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d0222742ebcd0b055bcc.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/624.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/625.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/625.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"dfaeea13d195e7e69dcf.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/625.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/626.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/626.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"deeb97e719ae90118a6e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/626.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/627.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/627.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"dfb3423dbc42b52a50fb.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/627.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/628.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/628.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"90ae9b71d993b59901d3.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/628.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/629.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/629.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d9f8dd03497ce01b804f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/629.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/63.png":
+/*!********************************!*\
+  !*** ./public/pokemons/63.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"94090d77447b0eb8847c.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/63.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/630.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/630.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"566bf822646141c71de3.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/630.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/631.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/631.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"7f435a4b758d2a23a154.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/631.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/632.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/632.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"f1402f98e9a151667c38.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/632.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/633.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/633.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"2640457d8d20b5d05437.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/633.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/634.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/634.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0a852265cb00145b2e96.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/634.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/635.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/635.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"649b82218391712754a5.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/635.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/636.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/636.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"54e057b19d6438d413ef.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/636.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/637.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/637.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"de6a3c0ee6329b377abb.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/637.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/638.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/638.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"46c4734b09bbfa148f49.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/638.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/639.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/639.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b48198d5aaf34d734071.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/639.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/64.png":
+/*!********************************!*\
+  !*** ./public/pokemons/64.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"1f1553625b8dceac0a8b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/64.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/640.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/640.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"2a07f29af8538170a89d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/640.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/641.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/641.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"82b9c054f958fb151b79.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/641.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/642.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/642.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9f8479637c7ebac15547.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/642.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/643.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/643.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"cd430b793b2efcd6aadd.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/643.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/644.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/644.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"a9319bc332ac8f0f0f49.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/644.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/645.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/645.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"88d957c80d22b53983c8.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/645.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/646.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/646.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"650e9e1b592888c5c58e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/646.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/647.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/647.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"aada9226d1e2dfc1b69e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/647.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/648.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/648.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9023a344ac236ece0f15.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/648.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/649.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/649.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"1bafebcb5a2f9d2a901d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/649.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/65.png":
+/*!********************************!*\
+  !*** ./public/pokemons/65.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"4210eff6720d47807c00.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/65.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/650.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/650.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b02094047603eba78cc4.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/650.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/651.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/651.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9cfdeb328d1505ce46c4.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/651.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/652.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/652.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"1df4e16081ea8c0feab8.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/652.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/653.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/653.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9119d8edfeecc399d4c9.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/653.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/654.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/654.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"8262eb3be9c415caefe2.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/654.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/655.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/655.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"c053155f029af1f2ab6e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/655.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/656.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/656.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"1958f1d7b841661f77a1.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/656.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/657.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/657.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"2c7d85cdf085a914ff79.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/657.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/658.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/658.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9cb7666c54a2ca4a8a50.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/658.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/659.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/659.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b8efe7347f163c42c01f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/659.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/66.png":
+/*!********************************!*\
+  !*** ./public/pokemons/66.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"7394a6d2cf39dd5527cb.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/66.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/660.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/660.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"954e549dad98b234645e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/660.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/661.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/661.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0ad2e5a494fabe04e4e8.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/661.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/662.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/662.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9a5c5e0b8ff45742f1c3.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/662.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/663.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/663.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ba959a7f3a3e3705f473.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/663.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/664.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/664.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"496347d97dbf78725931.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/664.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/665.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/665.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b48fad4375ff9c9a6699.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/665.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/666.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/666.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"bd76eeeb0964427e9d4f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/666.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/667.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/667.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"af7498aea61301cfd458.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/667.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/668.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/668.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"5fc4560cd18d828d3c12.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/668.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/669.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/669.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"15ff4953aa53f873db67.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/669.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/67.png":
+/*!********************************!*\
+  !*** ./public/pokemons/67.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"bab325f45cce8bc7efac.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/67.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/670.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/670.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"762f651f6ec4926f39bf.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/670.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/671.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/671.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"f607567803c92600d609.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/671.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/672.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/672.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ed1a5021d68e3650d607.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/672.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/673.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/673.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"83a63b541be176f6a2b7.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/673.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/674.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/674.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"19597bf03a8936f1f1f6.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/674.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/675.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/675.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d803863751bdb0a3ff1c.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/675.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/676.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/676.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"8f2d8c4764d8680745c7.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/676.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/677.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/677.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"bd1121508579aa382624.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/677.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/678.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/678.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"86f07cf836e613e8e804.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/678.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/679.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/679.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9489765746d051141498.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/679.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/68.png":
+/*!********************************!*\
+  !*** ./public/pokemons/68.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"64337329578e06d3067f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/68.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/680.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/680.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"650aa81b6df626952d2a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/680.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/681.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/681.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"6ce1c31ce59ced4fb89b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/681.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/682.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/682.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"2570eb9444e25a5a612d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/682.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/683.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/683.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"6eb15fd2aa9590a3c219.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/683.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/684.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/684.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"99de7137366005f42303.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/684.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/685.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/685.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9d9bf87020e367d86e2d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/685.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/686.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/686.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"aa8bdc2418127360979f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/686.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/687.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/687.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"43c427df32a2e44cab7a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/687.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/688.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/688.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"2f5c466aab1294fc1346.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/688.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/689.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/689.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"11a310ac72e9ec88869c.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/689.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/69.png":
+/*!********************************!*\
+  !*** ./public/pokemons/69.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d0e0ebb326571366ab1c.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/69.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/690.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/690.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"198354b8281396587fde.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/690.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/691.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/691.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"5980f5622921d830bc85.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/691.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/692.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/692.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ff683717e0163df8c238.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/692.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/693.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/693.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"bbb16651912ab6d5fad8.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/693.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/694.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/694.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d26e353f9b82a7f1f0e4.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/694.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/695.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/695.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"948204aeedc086466d81.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/695.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/696.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/696.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"1863056ad96557c08619.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/696.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/697.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/697.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"afc1399867098342c4a6.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/697.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/698.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/698.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"50c4f7ce16f161fa2587.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/698.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/699.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/699.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9d9d4d141745d7261a3b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/699.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/7.png":
+/*!*******************************!*\
+  !*** ./public/pokemons/7.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"375e183eb001f13558e5.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/7.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/70.png":
+/*!********************************!*\
+  !*** ./public/pokemons/70.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"af43892ecfff9c9acfde.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/70.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/700.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/700.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"31fba552253f16babd4b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/700.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/701.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/701.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"a786dff9dbc76fcb6762.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/701.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/702.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/702.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"2b2de6118070ed6ac1c1.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/702.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/703.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/703.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d6fcd6ca612e7cd959bf.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/703.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/704.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/704.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9f8e6112921528486e3a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/704.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/705.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/705.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"63dbd2b236e04589d92d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/705.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/706.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/706.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"a39b0d3a1175284ea5c1.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/706.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/707.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/707.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"076a3f270494958e6272.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/707.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/708.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/708.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"14c602dbf43d9da3c66a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/708.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/709.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/709.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"7caa8b4383984aa3ece8.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/709.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/71.png":
+/*!********************************!*\
+  !*** ./public/pokemons/71.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d3d297d91e8c44ccab55.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/71.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/710.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/710.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b51adacf173e3e80f5c3.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/710.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/711.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/711.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"d545fc474b60a8d3da8f.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/711.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/712.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/712.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"ca5880d67b1dacf4fbc3.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/712.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/713.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/713.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"eef4e1beed186a1b05f3.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/713.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/714.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/714.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"fdb3df6a71158254c90b.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/714.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/715.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/715.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"4d9f4a2b72b51cc59fe8.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/715.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/716.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/716.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"58ee249c1bed77dc335a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/716.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/717.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/717.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"e065908891e85f1940de.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/717.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/718.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/718.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"58c56dc58c05884f0c07.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/718.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/719.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/719.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"6dc5fa88c9b274d073ef.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/719.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/72.png":
+/*!********************************!*\
+  !*** ./public/pokemons/72.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"faf1274738f990634d17.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/72.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/720.png":
+/*!*********************************!*\
+  !*** ./public/pokemons/720.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9a3e8ac393c7433cf002.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/720.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/73.png":
+/*!********************************!*\
+  !*** ./public/pokemons/73.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0ba3af2312e259fff3c3.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/73.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/74.png":
+/*!********************************!*\
+  !*** ./public/pokemons/74.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"844ecba151a77b695a48.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/74.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/75.png":
+/*!********************************!*\
+  !*** ./public/pokemons/75.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"66fae85c34e2842dd10c.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/75.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/76.png":
+/*!********************************!*\
+  !*** ./public/pokemons/76.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"c74ae125d1c07e94ccfb.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/76.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/77.png":
+/*!********************************!*\
+  !*** ./public/pokemons/77.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"46e296d926f51188df3d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/77.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/78.png":
+/*!********************************!*\
+  !*** ./public/pokemons/78.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"04ec9c51feab0f90bfaf.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/78.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/79.png":
+/*!********************************!*\
+  !*** ./public/pokemons/79.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"6ab242983c8208c1f421.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/79.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/8.png":
+/*!*******************************!*\
+  !*** ./public/pokemons/8.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"70299837fce2fd4d8e7c.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/8.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/80.png":
+/*!********************************!*\
+  !*** ./public/pokemons/80.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"5f2f3726fa972264d3f6.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/80.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/81.png":
+/*!********************************!*\
+  !*** ./public/pokemons/81.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"3427d80e8908cefacf13.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/81.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/82.png":
+/*!********************************!*\
+  !*** ./public/pokemons/82.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"cac75167c2cfae824154.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/82.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/83.png":
+/*!********************************!*\
+  !*** ./public/pokemons/83.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"656250f869864b05e14c.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/83.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/84.png":
+/*!********************************!*\
+  !*** ./public/pokemons/84.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"162e74b481df6e80b948.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/84.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/85.png":
+/*!********************************!*\
+  !*** ./public/pokemons/85.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"fcfd23be1e19ccf82f3e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/85.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/86.png":
+/*!********************************!*\
+  !*** ./public/pokemons/86.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"b72e88a5a2bee084c803.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/86.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/87.png":
+/*!********************************!*\
+  !*** ./public/pokemons/87.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"76b77d685ca71251a741.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/87.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/88.png":
+/*!********************************!*\
+  !*** ./public/pokemons/88.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"3b70ba38c7e8bd50bf42.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/88.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/89.png":
+/*!********************************!*\
+  !*** ./public/pokemons/89.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"8d46b2898fefa434fe9a.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/89.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/9.png":
+/*!*******************************!*\
+  !*** ./public/pokemons/9.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"7f3e7e958ae24ecc8139.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/9.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/90.png":
+/*!********************************!*\
+  !*** ./public/pokemons/90.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"316e4b7ea5348bd4cbbf.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/90.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/91.png":
+/*!********************************!*\
+  !*** ./public/pokemons/91.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"a098b4b2cda7753aeeaa.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/91.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/92.png":
+/*!********************************!*\
+  !*** ./public/pokemons/92.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"05191e0aba23ce561c92.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/92.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/93.png":
+/*!********************************!*\
+  !*** ./public/pokemons/93.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"220e87e9bf68e630b42d.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/93.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/94.png":
+/*!********************************!*\
+  !*** ./public/pokemons/94.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"94b187d9f5bcf059c00e.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/94.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/95.png":
+/*!********************************!*\
+  !*** ./public/pokemons/95.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"413d56871136c3d5d1e9.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/95.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/96.png":
+/*!********************************!*\
+  !*** ./public/pokemons/96.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"3a9243938f9688881b25.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/96.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/97.png":
+/*!********************************!*\
+  !*** ./public/pokemons/97.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0a5391ba6d37d112fdf3.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/97.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/98.png":
+/*!********************************!*\
+  !*** ./public/pokemons/98.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"009d12718291054fccf0.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/98.png?");
+
+/***/ }),
+
+/***/ "./public/pokemons/99.png":
+/*!********************************!*\
+  !*** ./public/pokemons/99.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"6d649013a9f5d7789854.png\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/99.png?");
+
+/***/ }),
+
 /***/ "./src/index.css":
 /*!***********************!*\
   !*** ./src/index.css ***!
@@ -809,14 +8729,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
-/***/ "./public/pokemons/pokeball.svg":
-/*!**************************************!*\
-  !*** ./public/pokemons/pokeball.svg ***!
-  \**************************************/
+/***/ "./public/pokemons sync recursive ^\\.\\/.*\\.png$":
+/*!*********************************************!*\
+  !*** ./public/pokemons/ sync ^\.\/.*\.png$ ***!
+  \*********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
-eval("module.exports = __webpack_require__.p + \"b680bb83e8943ca384d9.svg\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/pokeball.svg?");
+eval("var map = {\n\t\"./1.png\": \"./public/pokemons/1.png\",\n\t\"./10.png\": \"./public/pokemons/10.png\",\n\t\"./100.png\": \"./public/pokemons/100.png\",\n\t\"./101.png\": \"./public/pokemons/101.png\",\n\t\"./102.png\": \"./public/pokemons/102.png\",\n\t\"./103.png\": \"./public/pokemons/103.png\",\n\t\"./104.png\": \"./public/pokemons/104.png\",\n\t\"./105.png\": \"./public/pokemons/105.png\",\n\t\"./106.png\": \"./public/pokemons/106.png\",\n\t\"./107.png\": \"./public/pokemons/107.png\",\n\t\"./108.png\": \"./public/pokemons/108.png\",\n\t\"./109.png\": \"./public/pokemons/109.png\",\n\t\"./11.png\": \"./public/pokemons/11.png\",\n\t\"./110.png\": \"./public/pokemons/110.png\",\n\t\"./111.png\": \"./public/pokemons/111.png\",\n\t\"./112.png\": \"./public/pokemons/112.png\",\n\t\"./113.png\": \"./public/pokemons/113.png\",\n\t\"./114.png\": \"./public/pokemons/114.png\",\n\t\"./115.png\": \"./public/pokemons/115.png\",\n\t\"./116.png\": \"./public/pokemons/116.png\",\n\t\"./117.png\": \"./public/pokemons/117.png\",\n\t\"./118.png\": \"./public/pokemons/118.png\",\n\t\"./119.png\": \"./public/pokemons/119.png\",\n\t\"./12.png\": \"./public/pokemons/12.png\",\n\t\"./120.png\": \"./public/pokemons/120.png\",\n\t\"./121.png\": \"./public/pokemons/121.png\",\n\t\"./122.png\": \"./public/pokemons/122.png\",\n\t\"./123.png\": \"./public/pokemons/123.png\",\n\t\"./124.png\": \"./public/pokemons/124.png\",\n\t\"./125.png\": \"./public/pokemons/125.png\",\n\t\"./126.png\": \"./public/pokemons/126.png\",\n\t\"./127.png\": \"./public/pokemons/127.png\",\n\t\"./128.png\": \"./public/pokemons/128.png\",\n\t\"./129.png\": \"./public/pokemons/129.png\",\n\t\"./13.png\": \"./public/pokemons/13.png\",\n\t\"./130.png\": \"./public/pokemons/130.png\",\n\t\"./131.png\": \"./public/pokemons/131.png\",\n\t\"./132.png\": \"./public/pokemons/132.png\",\n\t\"./133.png\": \"./public/pokemons/133.png\",\n\t\"./134.png\": \"./public/pokemons/134.png\",\n\t\"./135.png\": \"./public/pokemons/135.png\",\n\t\"./136.png\": \"./public/pokemons/136.png\",\n\t\"./137.png\": \"./public/pokemons/137.png\",\n\t\"./138.png\": \"./public/pokemons/138.png\",\n\t\"./139.png\": \"./public/pokemons/139.png\",\n\t\"./14.png\": \"./public/pokemons/14.png\",\n\t\"./140.png\": \"./public/pokemons/140.png\",\n\t\"./141.png\": \"./public/pokemons/141.png\",\n\t\"./142.png\": \"./public/pokemons/142.png\",\n\t\"./143.png\": \"./public/pokemons/143.png\",\n\t\"./144.png\": \"./public/pokemons/144.png\",\n\t\"./145.png\": \"./public/pokemons/145.png\",\n\t\"./146.png\": \"./public/pokemons/146.png\",\n\t\"./147.png\": \"./public/pokemons/147.png\",\n\t\"./148.png\": \"./public/pokemons/148.png\",\n\t\"./149.png\": \"./public/pokemons/149.png\",\n\t\"./15.png\": \"./public/pokemons/15.png\",\n\t\"./150.png\": \"./public/pokemons/150.png\",\n\t\"./151.png\": \"./public/pokemons/151.png\",\n\t\"./152.png\": \"./public/pokemons/152.png\",\n\t\"./153.png\": \"./public/pokemons/153.png\",\n\t\"./154.png\": \"./public/pokemons/154.png\",\n\t\"./155.png\": \"./public/pokemons/155.png\",\n\t\"./156.png\": \"./public/pokemons/156.png\",\n\t\"./157.png\": \"./public/pokemons/157.png\",\n\t\"./158.png\": \"./public/pokemons/158.png\",\n\t\"./159.png\": \"./public/pokemons/159.png\",\n\t\"./16.png\": \"./public/pokemons/16.png\",\n\t\"./160.png\": \"./public/pokemons/160.png\",\n\t\"./161.png\": \"./public/pokemons/161.png\",\n\t\"./162.png\": \"./public/pokemons/162.png\",\n\t\"./163.png\": \"./public/pokemons/163.png\",\n\t\"./164.png\": \"./public/pokemons/164.png\",\n\t\"./165.png\": \"./public/pokemons/165.png\",\n\t\"./166.png\": \"./public/pokemons/166.png\",\n\t\"./167.png\": \"./public/pokemons/167.png\",\n\t\"./168.png\": \"./public/pokemons/168.png\",\n\t\"./169.png\": \"./public/pokemons/169.png\",\n\t\"./17.png\": \"./public/pokemons/17.png\",\n\t\"./170.png\": \"./public/pokemons/170.png\",\n\t\"./171.png\": \"./public/pokemons/171.png\",\n\t\"./172.png\": \"./public/pokemons/172.png\",\n\t\"./173.png\": \"./public/pokemons/173.png\",\n\t\"./174.png\": \"./public/pokemons/174.png\",\n\t\"./175.png\": \"./public/pokemons/175.png\",\n\t\"./176.png\": \"./public/pokemons/176.png\",\n\t\"./177.png\": \"./public/pokemons/177.png\",\n\t\"./178.png\": \"./public/pokemons/178.png\",\n\t\"./179.png\": \"./public/pokemons/179.png\",\n\t\"./18.png\": \"./public/pokemons/18.png\",\n\t\"./180.png\": \"./public/pokemons/180.png\",\n\t\"./181.png\": \"./public/pokemons/181.png\",\n\t\"./182.png\": \"./public/pokemons/182.png\",\n\t\"./183.png\": \"./public/pokemons/183.png\",\n\t\"./184.png\": \"./public/pokemons/184.png\",\n\t\"./185.png\": \"./public/pokemons/185.png\",\n\t\"./186.png\": \"./public/pokemons/186.png\",\n\t\"./187.png\": \"./public/pokemons/187.png\",\n\t\"./188.png\": \"./public/pokemons/188.png\",\n\t\"./189.png\": \"./public/pokemons/189.png\",\n\t\"./19.png\": \"./public/pokemons/19.png\",\n\t\"./190.png\": \"./public/pokemons/190.png\",\n\t\"./191.png\": \"./public/pokemons/191.png\",\n\t\"./192.png\": \"./public/pokemons/192.png\",\n\t\"./193.png\": \"./public/pokemons/193.png\",\n\t\"./194.png\": \"./public/pokemons/194.png\",\n\t\"./195.png\": \"./public/pokemons/195.png\",\n\t\"./196.png\": \"./public/pokemons/196.png\",\n\t\"./197.png\": \"./public/pokemons/197.png\",\n\t\"./198.png\": \"./public/pokemons/198.png\",\n\t\"./199.png\": \"./public/pokemons/199.png\",\n\t\"./2.png\": \"./public/pokemons/2.png\",\n\t\"./20.png\": \"./public/pokemons/20.png\",\n\t\"./200.png\": \"./public/pokemons/200.png\",\n\t\"./201.png\": \"./public/pokemons/201.png\",\n\t\"./202.png\": \"./public/pokemons/202.png\",\n\t\"./203.png\": \"./public/pokemons/203.png\",\n\t\"./204.png\": \"./public/pokemons/204.png\",\n\t\"./205.png\": \"./public/pokemons/205.png\",\n\t\"./206.png\": \"./public/pokemons/206.png\",\n\t\"./207.png\": \"./public/pokemons/207.png\",\n\t\"./208.png\": \"./public/pokemons/208.png\",\n\t\"./209.png\": \"./public/pokemons/209.png\",\n\t\"./21.png\": \"./public/pokemons/21.png\",\n\t\"./210.png\": \"./public/pokemons/210.png\",\n\t\"./211.png\": \"./public/pokemons/211.png\",\n\t\"./212.png\": \"./public/pokemons/212.png\",\n\t\"./213.png\": \"./public/pokemons/213.png\",\n\t\"./214.png\": \"./public/pokemons/214.png\",\n\t\"./215.png\": \"./public/pokemons/215.png\",\n\t\"./216.png\": \"./public/pokemons/216.png\",\n\t\"./217.png\": \"./public/pokemons/217.png\",\n\t\"./218.png\": \"./public/pokemons/218.png\",\n\t\"./219.png\": \"./public/pokemons/219.png\",\n\t\"./22.png\": \"./public/pokemons/22.png\",\n\t\"./220.png\": \"./public/pokemons/220.png\",\n\t\"./221.png\": \"./public/pokemons/221.png\",\n\t\"./222.png\": \"./public/pokemons/222.png\",\n\t\"./223.png\": \"./public/pokemons/223.png\",\n\t\"./224.png\": \"./public/pokemons/224.png\",\n\t\"./225.png\": \"./public/pokemons/225.png\",\n\t\"./226.png\": \"./public/pokemons/226.png\",\n\t\"./227.png\": \"./public/pokemons/227.png\",\n\t\"./228.png\": \"./public/pokemons/228.png\",\n\t\"./229.png\": \"./public/pokemons/229.png\",\n\t\"./23.png\": \"./public/pokemons/23.png\",\n\t\"./230.png\": \"./public/pokemons/230.png\",\n\t\"./231.png\": \"./public/pokemons/231.png\",\n\t\"./232.png\": \"./public/pokemons/232.png\",\n\t\"./233.png\": \"./public/pokemons/233.png\",\n\t\"./234.png\": \"./public/pokemons/234.png\",\n\t\"./235.png\": \"./public/pokemons/235.png\",\n\t\"./236.png\": \"./public/pokemons/236.png\",\n\t\"./237.png\": \"./public/pokemons/237.png\",\n\t\"./238.png\": \"./public/pokemons/238.png\",\n\t\"./239.png\": \"./public/pokemons/239.png\",\n\t\"./24.png\": \"./public/pokemons/24.png\",\n\t\"./240.png\": \"./public/pokemons/240.png\",\n\t\"./241.png\": \"./public/pokemons/241.png\",\n\t\"./242.png\": \"./public/pokemons/242.png\",\n\t\"./243.png\": \"./public/pokemons/243.png\",\n\t\"./244.png\": \"./public/pokemons/244.png\",\n\t\"./245.png\": \"./public/pokemons/245.png\",\n\t\"./246.png\": \"./public/pokemons/246.png\",\n\t\"./247.png\": \"./public/pokemons/247.png\",\n\t\"./248.png\": \"./public/pokemons/248.png\",\n\t\"./249.png\": \"./public/pokemons/249.png\",\n\t\"./25.png\": \"./public/pokemons/25.png\",\n\t\"./250.png\": \"./public/pokemons/250.png\",\n\t\"./251.png\": \"./public/pokemons/251.png\",\n\t\"./252.png\": \"./public/pokemons/252.png\",\n\t\"./253.png\": \"./public/pokemons/253.png\",\n\t\"./254.png\": \"./public/pokemons/254.png\",\n\t\"./255.png\": \"./public/pokemons/255.png\",\n\t\"./256.png\": \"./public/pokemons/256.png\",\n\t\"./257.png\": \"./public/pokemons/257.png\",\n\t\"./258.png\": \"./public/pokemons/258.png\",\n\t\"./259.png\": \"./public/pokemons/259.png\",\n\t\"./26.png\": \"./public/pokemons/26.png\",\n\t\"./260.png\": \"./public/pokemons/260.png\",\n\t\"./261.png\": \"./public/pokemons/261.png\",\n\t\"./262.png\": \"./public/pokemons/262.png\",\n\t\"./263.png\": \"./public/pokemons/263.png\",\n\t\"./264.png\": \"./public/pokemons/264.png\",\n\t\"./265.png\": \"./public/pokemons/265.png\",\n\t\"./266.png\": \"./public/pokemons/266.png\",\n\t\"./267.png\": \"./public/pokemons/267.png\",\n\t\"./268.png\": \"./public/pokemons/268.png\",\n\t\"./269.png\": \"./public/pokemons/269.png\",\n\t\"./27.png\": \"./public/pokemons/27.png\",\n\t\"./270.png\": \"./public/pokemons/270.png\",\n\t\"./271.png\": \"./public/pokemons/271.png\",\n\t\"./272.png\": \"./public/pokemons/272.png\",\n\t\"./273.png\": \"./public/pokemons/273.png\",\n\t\"./274.png\": \"./public/pokemons/274.png\",\n\t\"./275.png\": \"./public/pokemons/275.png\",\n\t\"./276.png\": \"./public/pokemons/276.png\",\n\t\"./277.png\": \"./public/pokemons/277.png\",\n\t\"./278.png\": \"./public/pokemons/278.png\",\n\t\"./279.png\": \"./public/pokemons/279.png\",\n\t\"./28.png\": \"./public/pokemons/28.png\",\n\t\"./280.png\": \"./public/pokemons/280.png\",\n\t\"./281.png\": \"./public/pokemons/281.png\",\n\t\"./282.png\": \"./public/pokemons/282.png\",\n\t\"./283.png\": \"./public/pokemons/283.png\",\n\t\"./284.png\": \"./public/pokemons/284.png\",\n\t\"./285.png\": \"./public/pokemons/285.png\",\n\t\"./286.png\": \"./public/pokemons/286.png\",\n\t\"./287.png\": \"./public/pokemons/287.png\",\n\t\"./288.png\": \"./public/pokemons/288.png\",\n\t\"./289.png\": \"./public/pokemons/289.png\",\n\t\"./29.png\": \"./public/pokemons/29.png\",\n\t\"./290.png\": \"./public/pokemons/290.png\",\n\t\"./291.png\": \"./public/pokemons/291.png\",\n\t\"./292.png\": \"./public/pokemons/292.png\",\n\t\"./293.png\": \"./public/pokemons/293.png\",\n\t\"./294.png\": \"./public/pokemons/294.png\",\n\t\"./295.png\": \"./public/pokemons/295.png\",\n\t\"./296.png\": \"./public/pokemons/296.png\",\n\t\"./297.png\": \"./public/pokemons/297.png\",\n\t\"./298.png\": \"./public/pokemons/298.png\",\n\t\"./299.png\": \"./public/pokemons/299.png\",\n\t\"./3.png\": \"./public/pokemons/3.png\",\n\t\"./30.png\": \"./public/pokemons/30.png\",\n\t\"./300.png\": \"./public/pokemons/300.png\",\n\t\"./301.png\": \"./public/pokemons/301.png\",\n\t\"./302.png\": \"./public/pokemons/302.png\",\n\t\"./303.png\": \"./public/pokemons/303.png\",\n\t\"./304.png\": \"./public/pokemons/304.png\",\n\t\"./305.png\": \"./public/pokemons/305.png\",\n\t\"./306.png\": \"./public/pokemons/306.png\",\n\t\"./307.png\": \"./public/pokemons/307.png\",\n\t\"./308.png\": \"./public/pokemons/308.png\",\n\t\"./309.png\": \"./public/pokemons/309.png\",\n\t\"./31.png\": \"./public/pokemons/31.png\",\n\t\"./310.png\": \"./public/pokemons/310.png\",\n\t\"./311.png\": \"./public/pokemons/311.png\",\n\t\"./312.png\": \"./public/pokemons/312.png\",\n\t\"./313.png\": \"./public/pokemons/313.png\",\n\t\"./314.png\": \"./public/pokemons/314.png\",\n\t\"./315.png\": \"./public/pokemons/315.png\",\n\t\"./316.png\": \"./public/pokemons/316.png\",\n\t\"./317.png\": \"./public/pokemons/317.png\",\n\t\"./318.png\": \"./public/pokemons/318.png\",\n\t\"./319.png\": \"./public/pokemons/319.png\",\n\t\"./32.png\": \"./public/pokemons/32.png\",\n\t\"./320.png\": \"./public/pokemons/320.png\",\n\t\"./321.png\": \"./public/pokemons/321.png\",\n\t\"./322.png\": \"./public/pokemons/322.png\",\n\t\"./323.png\": \"./public/pokemons/323.png\",\n\t\"./324.png\": \"./public/pokemons/324.png\",\n\t\"./325.png\": \"./public/pokemons/325.png\",\n\t\"./326.png\": \"./public/pokemons/326.png\",\n\t\"./327.png\": \"./public/pokemons/327.png\",\n\t\"./328.png\": \"./public/pokemons/328.png\",\n\t\"./329.png\": \"./public/pokemons/329.png\",\n\t\"./33.png\": \"./public/pokemons/33.png\",\n\t\"./330.png\": \"./public/pokemons/330.png\",\n\t\"./331.png\": \"./public/pokemons/331.png\",\n\t\"./332.png\": \"./public/pokemons/332.png\",\n\t\"./333.png\": \"./public/pokemons/333.png\",\n\t\"./334.png\": \"./public/pokemons/334.png\",\n\t\"./335.png\": \"./public/pokemons/335.png\",\n\t\"./336.png\": \"./public/pokemons/336.png\",\n\t\"./337.png\": \"./public/pokemons/337.png\",\n\t\"./338.png\": \"./public/pokemons/338.png\",\n\t\"./339.png\": \"./public/pokemons/339.png\",\n\t\"./34.png\": \"./public/pokemons/34.png\",\n\t\"./340.png\": \"./public/pokemons/340.png\",\n\t\"./341.png\": \"./public/pokemons/341.png\",\n\t\"./342.png\": \"./public/pokemons/342.png\",\n\t\"./343.png\": \"./public/pokemons/343.png\",\n\t\"./344.png\": \"./public/pokemons/344.png\",\n\t\"./345.png\": \"./public/pokemons/345.png\",\n\t\"./346.png\": \"./public/pokemons/346.png\",\n\t\"./347.png\": \"./public/pokemons/347.png\",\n\t\"./348.png\": \"./public/pokemons/348.png\",\n\t\"./349.png\": \"./public/pokemons/349.png\",\n\t\"./35.png\": \"./public/pokemons/35.png\",\n\t\"./350.png\": \"./public/pokemons/350.png\",\n\t\"./351.png\": \"./public/pokemons/351.png\",\n\t\"./352.png\": \"./public/pokemons/352.png\",\n\t\"./353.png\": \"./public/pokemons/353.png\",\n\t\"./354.png\": \"./public/pokemons/354.png\",\n\t\"./355.png\": \"./public/pokemons/355.png\",\n\t\"./356.png\": \"./public/pokemons/356.png\",\n\t\"./357.png\": \"./public/pokemons/357.png\",\n\t\"./358.png\": \"./public/pokemons/358.png\",\n\t\"./359.png\": \"./public/pokemons/359.png\",\n\t\"./36.png\": \"./public/pokemons/36.png\",\n\t\"./360.png\": \"./public/pokemons/360.png\",\n\t\"./361.png\": \"./public/pokemons/361.png\",\n\t\"./362.png\": \"./public/pokemons/362.png\",\n\t\"./363.png\": \"./public/pokemons/363.png\",\n\t\"./364.png\": \"./public/pokemons/364.png\",\n\t\"./365.png\": \"./public/pokemons/365.png\",\n\t\"./366.png\": \"./public/pokemons/366.png\",\n\t\"./367.png\": \"./public/pokemons/367.png\",\n\t\"./368.png\": \"./public/pokemons/368.png\",\n\t\"./369.png\": \"./public/pokemons/369.png\",\n\t\"./37.png\": \"./public/pokemons/37.png\",\n\t\"./370.png\": \"./public/pokemons/370.png\",\n\t\"./371.png\": \"./public/pokemons/371.png\",\n\t\"./372.png\": \"./public/pokemons/372.png\",\n\t\"./373.png\": \"./public/pokemons/373.png\",\n\t\"./374.png\": \"./public/pokemons/374.png\",\n\t\"./375.png\": \"./public/pokemons/375.png\",\n\t\"./376.png\": \"./public/pokemons/376.png\",\n\t\"./377.png\": \"./public/pokemons/377.png\",\n\t\"./378.png\": \"./public/pokemons/378.png\",\n\t\"./379.png\": \"./public/pokemons/379.png\",\n\t\"./38.png\": \"./public/pokemons/38.png\",\n\t\"./380.png\": \"./public/pokemons/380.png\",\n\t\"./381.png\": \"./public/pokemons/381.png\",\n\t\"./382.png\": \"./public/pokemons/382.png\",\n\t\"./383.png\": \"./public/pokemons/383.png\",\n\t\"./384.png\": \"./public/pokemons/384.png\",\n\t\"./385.png\": \"./public/pokemons/385.png\",\n\t\"./386.png\": \"./public/pokemons/386.png\",\n\t\"./387.png\": \"./public/pokemons/387.png\",\n\t\"./388.png\": \"./public/pokemons/388.png\",\n\t\"./389.png\": \"./public/pokemons/389.png\",\n\t\"./39.png\": \"./public/pokemons/39.png\",\n\t\"./390.png\": \"./public/pokemons/390.png\",\n\t\"./391.png\": \"./public/pokemons/391.png\",\n\t\"./392.png\": \"./public/pokemons/392.png\",\n\t\"./393.png\": \"./public/pokemons/393.png\",\n\t\"./394.png\": \"./public/pokemons/394.png\",\n\t\"./395.png\": \"./public/pokemons/395.png\",\n\t\"./396.png\": \"./public/pokemons/396.png\",\n\t\"./397.png\": \"./public/pokemons/397.png\",\n\t\"./398.png\": \"./public/pokemons/398.png\",\n\t\"./399.png\": \"./public/pokemons/399.png\",\n\t\"./4.png\": \"./public/pokemons/4.png\",\n\t\"./40.png\": \"./public/pokemons/40.png\",\n\t\"./400.png\": \"./public/pokemons/400.png\",\n\t\"./401.png\": \"./public/pokemons/401.png\",\n\t\"./402.png\": \"./public/pokemons/402.png\",\n\t\"./403.png\": \"./public/pokemons/403.png\",\n\t\"./404.png\": \"./public/pokemons/404.png\",\n\t\"./405.png\": \"./public/pokemons/405.png\",\n\t\"./406.png\": \"./public/pokemons/406.png\",\n\t\"./407.png\": \"./public/pokemons/407.png\",\n\t\"./408.png\": \"./public/pokemons/408.png\",\n\t\"./409.png\": \"./public/pokemons/409.png\",\n\t\"./41.png\": \"./public/pokemons/41.png\",\n\t\"./410.png\": \"./public/pokemons/410.png\",\n\t\"./411.png\": \"./public/pokemons/411.png\",\n\t\"./412.png\": \"./public/pokemons/412.png\",\n\t\"./413.png\": \"./public/pokemons/413.png\",\n\t\"./414.png\": \"./public/pokemons/414.png\",\n\t\"./415.png\": \"./public/pokemons/415.png\",\n\t\"./416.png\": \"./public/pokemons/416.png\",\n\t\"./417.png\": \"./public/pokemons/417.png\",\n\t\"./418.png\": \"./public/pokemons/418.png\",\n\t\"./419.png\": \"./public/pokemons/419.png\",\n\t\"./42.png\": \"./public/pokemons/42.png\",\n\t\"./420.png\": \"./public/pokemons/420.png\",\n\t\"./421.png\": \"./public/pokemons/421.png\",\n\t\"./422.png\": \"./public/pokemons/422.png\",\n\t\"./423.png\": \"./public/pokemons/423.png\",\n\t\"./424.png\": \"./public/pokemons/424.png\",\n\t\"./425.png\": \"./public/pokemons/425.png\",\n\t\"./426.png\": \"./public/pokemons/426.png\",\n\t\"./427.png\": \"./public/pokemons/427.png\",\n\t\"./428.png\": \"./public/pokemons/428.png\",\n\t\"./429.png\": \"./public/pokemons/429.png\",\n\t\"./43.png\": \"./public/pokemons/43.png\",\n\t\"./430.png\": \"./public/pokemons/430.png\",\n\t\"./431.png\": \"./public/pokemons/431.png\",\n\t\"./432.png\": \"./public/pokemons/432.png\",\n\t\"./433.png\": \"./public/pokemons/433.png\",\n\t\"./434.png\": \"./public/pokemons/434.png\",\n\t\"./435.png\": \"./public/pokemons/435.png\",\n\t\"./436.png\": \"./public/pokemons/436.png\",\n\t\"./437.png\": \"./public/pokemons/437.png\",\n\t\"./438.png\": \"./public/pokemons/438.png\",\n\t\"./439.png\": \"./public/pokemons/439.png\",\n\t\"./44.png\": \"./public/pokemons/44.png\",\n\t\"./440.png\": \"./public/pokemons/440.png\",\n\t\"./441.png\": \"./public/pokemons/441.png\",\n\t\"./442.png\": \"./public/pokemons/442.png\",\n\t\"./443.png\": \"./public/pokemons/443.png\",\n\t\"./444.png\": \"./public/pokemons/444.png\",\n\t\"./445.png\": \"./public/pokemons/445.png\",\n\t\"./446.png\": \"./public/pokemons/446.png\",\n\t\"./447.png\": \"./public/pokemons/447.png\",\n\t\"./448.png\": \"./public/pokemons/448.png\",\n\t\"./449.png\": \"./public/pokemons/449.png\",\n\t\"./45.png\": \"./public/pokemons/45.png\",\n\t\"./450.png\": \"./public/pokemons/450.png\",\n\t\"./451.png\": \"./public/pokemons/451.png\",\n\t\"./452.png\": \"./public/pokemons/452.png\",\n\t\"./453.png\": \"./public/pokemons/453.png\",\n\t\"./454.png\": \"./public/pokemons/454.png\",\n\t\"./455.png\": \"./public/pokemons/455.png\",\n\t\"./456.png\": \"./public/pokemons/456.png\",\n\t\"./457.png\": \"./public/pokemons/457.png\",\n\t\"./458.png\": \"./public/pokemons/458.png\",\n\t\"./459.png\": \"./public/pokemons/459.png\",\n\t\"./46.png\": \"./public/pokemons/46.png\",\n\t\"./460.png\": \"./public/pokemons/460.png\",\n\t\"./461.png\": \"./public/pokemons/461.png\",\n\t\"./462.png\": \"./public/pokemons/462.png\",\n\t\"./463.png\": \"./public/pokemons/463.png\",\n\t\"./464.png\": \"./public/pokemons/464.png\",\n\t\"./465.png\": \"./public/pokemons/465.png\",\n\t\"./466.png\": \"./public/pokemons/466.png\",\n\t\"./467.png\": \"./public/pokemons/467.png\",\n\t\"./468.png\": \"./public/pokemons/468.png\",\n\t\"./469.png\": \"./public/pokemons/469.png\",\n\t\"./47.png\": \"./public/pokemons/47.png\",\n\t\"./470.png\": \"./public/pokemons/470.png\",\n\t\"./471.png\": \"./public/pokemons/471.png\",\n\t\"./472.png\": \"./public/pokemons/472.png\",\n\t\"./473.png\": \"./public/pokemons/473.png\",\n\t\"./474.png\": \"./public/pokemons/474.png\",\n\t\"./475.png\": \"./public/pokemons/475.png\",\n\t\"./476.png\": \"./public/pokemons/476.png\",\n\t\"./477.png\": \"./public/pokemons/477.png\",\n\t\"./478.png\": \"./public/pokemons/478.png\",\n\t\"./479.png\": \"./public/pokemons/479.png\",\n\t\"./48.png\": \"./public/pokemons/48.png\",\n\t\"./480.png\": \"./public/pokemons/480.png\",\n\t\"./481.png\": \"./public/pokemons/481.png\",\n\t\"./482.png\": \"./public/pokemons/482.png\",\n\t\"./483.png\": \"./public/pokemons/483.png\",\n\t\"./484.png\": \"./public/pokemons/484.png\",\n\t\"./485.png\": \"./public/pokemons/485.png\",\n\t\"./486.png\": \"./public/pokemons/486.png\",\n\t\"./487.png\": \"./public/pokemons/487.png\",\n\t\"./488.png\": \"./public/pokemons/488.png\",\n\t\"./489.png\": \"./public/pokemons/489.png\",\n\t\"./49.png\": \"./public/pokemons/49.png\",\n\t\"./490.png\": \"./public/pokemons/490.png\",\n\t\"./491.png\": \"./public/pokemons/491.png\",\n\t\"./492.png\": \"./public/pokemons/492.png\",\n\t\"./493.png\": \"./public/pokemons/493.png\",\n\t\"./494.png\": \"./public/pokemons/494.png\",\n\t\"./495.png\": \"./public/pokemons/495.png\",\n\t\"./496.png\": \"./public/pokemons/496.png\",\n\t\"./497.png\": \"./public/pokemons/497.png\",\n\t\"./498.png\": \"./public/pokemons/498.png\",\n\t\"./499.png\": \"./public/pokemons/499.png\",\n\t\"./5.png\": \"./public/pokemons/5.png\",\n\t\"./50.png\": \"./public/pokemons/50.png\",\n\t\"./500.png\": \"./public/pokemons/500.png\",\n\t\"./501.png\": \"./public/pokemons/501.png\",\n\t\"./502.png\": \"./public/pokemons/502.png\",\n\t\"./503.png\": \"./public/pokemons/503.png\",\n\t\"./504.png\": \"./public/pokemons/504.png\",\n\t\"./505.png\": \"./public/pokemons/505.png\",\n\t\"./506.png\": \"./public/pokemons/506.png\",\n\t\"./507.png\": \"./public/pokemons/507.png\",\n\t\"./508.png\": \"./public/pokemons/508.png\",\n\t\"./509.png\": \"./public/pokemons/509.png\",\n\t\"./51.png\": \"./public/pokemons/51.png\",\n\t\"./510.png\": \"./public/pokemons/510.png\",\n\t\"./511.png\": \"./public/pokemons/511.png\",\n\t\"./512.png\": \"./public/pokemons/512.png\",\n\t\"./513.png\": \"./public/pokemons/513.png\",\n\t\"./514.png\": \"./public/pokemons/514.png\",\n\t\"./515.png\": \"./public/pokemons/515.png\",\n\t\"./516.png\": \"./public/pokemons/516.png\",\n\t\"./517.png\": \"./public/pokemons/517.png\",\n\t\"./518.png\": \"./public/pokemons/518.png\",\n\t\"./519.png\": \"./public/pokemons/519.png\",\n\t\"./52.png\": \"./public/pokemons/52.png\",\n\t\"./520.png\": \"./public/pokemons/520.png\",\n\t\"./521.png\": \"./public/pokemons/521.png\",\n\t\"./522.png\": \"./public/pokemons/522.png\",\n\t\"./523.png\": \"./public/pokemons/523.png\",\n\t\"./524.png\": \"./public/pokemons/524.png\",\n\t\"./525.png\": \"./public/pokemons/525.png\",\n\t\"./526.png\": \"./public/pokemons/526.png\",\n\t\"./527.png\": \"./public/pokemons/527.png\",\n\t\"./528.png\": \"./public/pokemons/528.png\",\n\t\"./529.png\": \"./public/pokemons/529.png\",\n\t\"./53.png\": \"./public/pokemons/53.png\",\n\t\"./530.png\": \"./public/pokemons/530.png\",\n\t\"./531.png\": \"./public/pokemons/531.png\",\n\t\"./532.png\": \"./public/pokemons/532.png\",\n\t\"./533.png\": \"./public/pokemons/533.png\",\n\t\"./534.png\": \"./public/pokemons/534.png\",\n\t\"./535.png\": \"./public/pokemons/535.png\",\n\t\"./536.png\": \"./public/pokemons/536.png\",\n\t\"./537.png\": \"./public/pokemons/537.png\",\n\t\"./538.png\": \"./public/pokemons/538.png\",\n\t\"./539.png\": \"./public/pokemons/539.png\",\n\t\"./54.png\": \"./public/pokemons/54.png\",\n\t\"./540.png\": \"./public/pokemons/540.png\",\n\t\"./541.png\": \"./public/pokemons/541.png\",\n\t\"./542.png\": \"./public/pokemons/542.png\",\n\t\"./543.png\": \"./public/pokemons/543.png\",\n\t\"./544.png\": \"./public/pokemons/544.png\",\n\t\"./545.png\": \"./public/pokemons/545.png\",\n\t\"./546.png\": \"./public/pokemons/546.png\",\n\t\"./547.png\": \"./public/pokemons/547.png\",\n\t\"./548.png\": \"./public/pokemons/548.png\",\n\t\"./549.png\": \"./public/pokemons/549.png\",\n\t\"./55.png\": \"./public/pokemons/55.png\",\n\t\"./550.png\": \"./public/pokemons/550.png\",\n\t\"./551.png\": \"./public/pokemons/551.png\",\n\t\"./552.png\": \"./public/pokemons/552.png\",\n\t\"./553.png\": \"./public/pokemons/553.png\",\n\t\"./554.png\": \"./public/pokemons/554.png\",\n\t\"./555.png\": \"./public/pokemons/555.png\",\n\t\"./556.png\": \"./public/pokemons/556.png\",\n\t\"./557.png\": \"./public/pokemons/557.png\",\n\t\"./558.png\": \"./public/pokemons/558.png\",\n\t\"./559.png\": \"./public/pokemons/559.png\",\n\t\"./56.png\": \"./public/pokemons/56.png\",\n\t\"./560.png\": \"./public/pokemons/560.png\",\n\t\"./561.png\": \"./public/pokemons/561.png\",\n\t\"./562.png\": \"./public/pokemons/562.png\",\n\t\"./563.png\": \"./public/pokemons/563.png\",\n\t\"./564.png\": \"./public/pokemons/564.png\",\n\t\"./565.png\": \"./public/pokemons/565.png\",\n\t\"./566.png\": \"./public/pokemons/566.png\",\n\t\"./567.png\": \"./public/pokemons/567.png\",\n\t\"./568.png\": \"./public/pokemons/568.png\",\n\t\"./569.png\": \"./public/pokemons/569.png\",\n\t\"./57.png\": \"./public/pokemons/57.png\",\n\t\"./570.png\": \"./public/pokemons/570.png\",\n\t\"./571.png\": \"./public/pokemons/571.png\",\n\t\"./572.png\": \"./public/pokemons/572.png\",\n\t\"./573.png\": \"./public/pokemons/573.png\",\n\t\"./574.png\": \"./public/pokemons/574.png\",\n\t\"./575.png\": \"./public/pokemons/575.png\",\n\t\"./576.png\": \"./public/pokemons/576.png\",\n\t\"./577.png\": \"./public/pokemons/577.png\",\n\t\"./578.png\": \"./public/pokemons/578.png\",\n\t\"./579.png\": \"./public/pokemons/579.png\",\n\t\"./58.png\": \"./public/pokemons/58.png\",\n\t\"./580.png\": \"./public/pokemons/580.png\",\n\t\"./581.png\": \"./public/pokemons/581.png\",\n\t\"./582.png\": \"./public/pokemons/582.png\",\n\t\"./583.png\": \"./public/pokemons/583.png\",\n\t\"./584.png\": \"./public/pokemons/584.png\",\n\t\"./585.png\": \"./public/pokemons/585.png\",\n\t\"./586.png\": \"./public/pokemons/586.png\",\n\t\"./587.png\": \"./public/pokemons/587.png\",\n\t\"./588.png\": \"./public/pokemons/588.png\",\n\t\"./589.png\": \"./public/pokemons/589.png\",\n\t\"./59.png\": \"./public/pokemons/59.png\",\n\t\"./590.png\": \"./public/pokemons/590.png\",\n\t\"./591.png\": \"./public/pokemons/591.png\",\n\t\"./592.png\": \"./public/pokemons/592.png\",\n\t\"./593.png\": \"./public/pokemons/593.png\",\n\t\"./594.png\": \"./public/pokemons/594.png\",\n\t\"./595.png\": \"./public/pokemons/595.png\",\n\t\"./596.png\": \"./public/pokemons/596.png\",\n\t\"./597.png\": \"./public/pokemons/597.png\",\n\t\"./598.png\": \"./public/pokemons/598.png\",\n\t\"./599.png\": \"./public/pokemons/599.png\",\n\t\"./6.png\": \"./public/pokemons/6.png\",\n\t\"./60.png\": \"./public/pokemons/60.png\",\n\t\"./600.png\": \"./public/pokemons/600.png\",\n\t\"./601.png\": \"./public/pokemons/601.png\",\n\t\"./602.png\": \"./public/pokemons/602.png\",\n\t\"./603.png\": \"./public/pokemons/603.png\",\n\t\"./604.png\": \"./public/pokemons/604.png\",\n\t\"./605.png\": \"./public/pokemons/605.png\",\n\t\"./606.png\": \"./public/pokemons/606.png\",\n\t\"./607.png\": \"./public/pokemons/607.png\",\n\t\"./608.png\": \"./public/pokemons/608.png\",\n\t\"./609.png\": \"./public/pokemons/609.png\",\n\t\"./61.png\": \"./public/pokemons/61.png\",\n\t\"./610.png\": \"./public/pokemons/610.png\",\n\t\"./611.png\": \"./public/pokemons/611.png\",\n\t\"./612.png\": \"./public/pokemons/612.png\",\n\t\"./613.png\": \"./public/pokemons/613.png\",\n\t\"./614.png\": \"./public/pokemons/614.png\",\n\t\"./615.png\": \"./public/pokemons/615.png\",\n\t\"./616.png\": \"./public/pokemons/616.png\",\n\t\"./617.png\": \"./public/pokemons/617.png\",\n\t\"./618.png\": \"./public/pokemons/618.png\",\n\t\"./619.png\": \"./public/pokemons/619.png\",\n\t\"./62.png\": \"./public/pokemons/62.png\",\n\t\"./620.png\": \"./public/pokemons/620.png\",\n\t\"./621.png\": \"./public/pokemons/621.png\",\n\t\"./622.png\": \"./public/pokemons/622.png\",\n\t\"./623.png\": \"./public/pokemons/623.png\",\n\t\"./624.png\": \"./public/pokemons/624.png\",\n\t\"./625.png\": \"./public/pokemons/625.png\",\n\t\"./626.png\": \"./public/pokemons/626.png\",\n\t\"./627.png\": \"./public/pokemons/627.png\",\n\t\"./628.png\": \"./public/pokemons/628.png\",\n\t\"./629.png\": \"./public/pokemons/629.png\",\n\t\"./63.png\": \"./public/pokemons/63.png\",\n\t\"./630.png\": \"./public/pokemons/630.png\",\n\t\"./631.png\": \"./public/pokemons/631.png\",\n\t\"./632.png\": \"./public/pokemons/632.png\",\n\t\"./633.png\": \"./public/pokemons/633.png\",\n\t\"./634.png\": \"./public/pokemons/634.png\",\n\t\"./635.png\": \"./public/pokemons/635.png\",\n\t\"./636.png\": \"./public/pokemons/636.png\",\n\t\"./637.png\": \"./public/pokemons/637.png\",\n\t\"./638.png\": \"./public/pokemons/638.png\",\n\t\"./639.png\": \"./public/pokemons/639.png\",\n\t\"./64.png\": \"./public/pokemons/64.png\",\n\t\"./640.png\": \"./public/pokemons/640.png\",\n\t\"./641.png\": \"./public/pokemons/641.png\",\n\t\"./642.png\": \"./public/pokemons/642.png\",\n\t\"./643.png\": \"./public/pokemons/643.png\",\n\t\"./644.png\": \"./public/pokemons/644.png\",\n\t\"./645.png\": \"./public/pokemons/645.png\",\n\t\"./646.png\": \"./public/pokemons/646.png\",\n\t\"./647.png\": \"./public/pokemons/647.png\",\n\t\"./648.png\": \"./public/pokemons/648.png\",\n\t\"./649.png\": \"./public/pokemons/649.png\",\n\t\"./65.png\": \"./public/pokemons/65.png\",\n\t\"./650.png\": \"./public/pokemons/650.png\",\n\t\"./651.png\": \"./public/pokemons/651.png\",\n\t\"./652.png\": \"./public/pokemons/652.png\",\n\t\"./653.png\": \"./public/pokemons/653.png\",\n\t\"./654.png\": \"./public/pokemons/654.png\",\n\t\"./655.png\": \"./public/pokemons/655.png\",\n\t\"./656.png\": \"./public/pokemons/656.png\",\n\t\"./657.png\": \"./public/pokemons/657.png\",\n\t\"./658.png\": \"./public/pokemons/658.png\",\n\t\"./659.png\": \"./public/pokemons/659.png\",\n\t\"./66.png\": \"./public/pokemons/66.png\",\n\t\"./660.png\": \"./public/pokemons/660.png\",\n\t\"./661.png\": \"./public/pokemons/661.png\",\n\t\"./662.png\": \"./public/pokemons/662.png\",\n\t\"./663.png\": \"./public/pokemons/663.png\",\n\t\"./664.png\": \"./public/pokemons/664.png\",\n\t\"./665.png\": \"./public/pokemons/665.png\",\n\t\"./666.png\": \"./public/pokemons/666.png\",\n\t\"./667.png\": \"./public/pokemons/667.png\",\n\t\"./668.png\": \"./public/pokemons/668.png\",\n\t\"./669.png\": \"./public/pokemons/669.png\",\n\t\"./67.png\": \"./public/pokemons/67.png\",\n\t\"./670.png\": \"./public/pokemons/670.png\",\n\t\"./671.png\": \"./public/pokemons/671.png\",\n\t\"./672.png\": \"./public/pokemons/672.png\",\n\t\"./673.png\": \"./public/pokemons/673.png\",\n\t\"./674.png\": \"./public/pokemons/674.png\",\n\t\"./675.png\": \"./public/pokemons/675.png\",\n\t\"./676.png\": \"./public/pokemons/676.png\",\n\t\"./677.png\": \"./public/pokemons/677.png\",\n\t\"./678.png\": \"./public/pokemons/678.png\",\n\t\"./679.png\": \"./public/pokemons/679.png\",\n\t\"./68.png\": \"./public/pokemons/68.png\",\n\t\"./680.png\": \"./public/pokemons/680.png\",\n\t\"./681.png\": \"./public/pokemons/681.png\",\n\t\"./682.png\": \"./public/pokemons/682.png\",\n\t\"./683.png\": \"./public/pokemons/683.png\",\n\t\"./684.png\": \"./public/pokemons/684.png\",\n\t\"./685.png\": \"./public/pokemons/685.png\",\n\t\"./686.png\": \"./public/pokemons/686.png\",\n\t\"./687.png\": \"./public/pokemons/687.png\",\n\t\"./688.png\": \"./public/pokemons/688.png\",\n\t\"./689.png\": \"./public/pokemons/689.png\",\n\t\"./69.png\": \"./public/pokemons/69.png\",\n\t\"./690.png\": \"./public/pokemons/690.png\",\n\t\"./691.png\": \"./public/pokemons/691.png\",\n\t\"./692.png\": \"./public/pokemons/692.png\",\n\t\"./693.png\": \"./public/pokemons/693.png\",\n\t\"./694.png\": \"./public/pokemons/694.png\",\n\t\"./695.png\": \"./public/pokemons/695.png\",\n\t\"./696.png\": \"./public/pokemons/696.png\",\n\t\"./697.png\": \"./public/pokemons/697.png\",\n\t\"./698.png\": \"./public/pokemons/698.png\",\n\t\"./699.png\": \"./public/pokemons/699.png\",\n\t\"./7.png\": \"./public/pokemons/7.png\",\n\t\"./70.png\": \"./public/pokemons/70.png\",\n\t\"./700.png\": \"./public/pokemons/700.png\",\n\t\"./701.png\": \"./public/pokemons/701.png\",\n\t\"./702.png\": \"./public/pokemons/702.png\",\n\t\"./703.png\": \"./public/pokemons/703.png\",\n\t\"./704.png\": \"./public/pokemons/704.png\",\n\t\"./705.png\": \"./public/pokemons/705.png\",\n\t\"./706.png\": \"./public/pokemons/706.png\",\n\t\"./707.png\": \"./public/pokemons/707.png\",\n\t\"./708.png\": \"./public/pokemons/708.png\",\n\t\"./709.png\": \"./public/pokemons/709.png\",\n\t\"./71.png\": \"./public/pokemons/71.png\",\n\t\"./710.png\": \"./public/pokemons/710.png\",\n\t\"./711.png\": \"./public/pokemons/711.png\",\n\t\"./712.png\": \"./public/pokemons/712.png\",\n\t\"./713.png\": \"./public/pokemons/713.png\",\n\t\"./714.png\": \"./public/pokemons/714.png\",\n\t\"./715.png\": \"./public/pokemons/715.png\",\n\t\"./716.png\": \"./public/pokemons/716.png\",\n\t\"./717.png\": \"./public/pokemons/717.png\",\n\t\"./718.png\": \"./public/pokemons/718.png\",\n\t\"./719.png\": \"./public/pokemons/719.png\",\n\t\"./72.png\": \"./public/pokemons/72.png\",\n\t\"./720.png\": \"./public/pokemons/720.png\",\n\t\"./73.png\": \"./public/pokemons/73.png\",\n\t\"./74.png\": \"./public/pokemons/74.png\",\n\t\"./75.png\": \"./public/pokemons/75.png\",\n\t\"./76.png\": \"./public/pokemons/76.png\",\n\t\"./77.png\": \"./public/pokemons/77.png\",\n\t\"./78.png\": \"./public/pokemons/78.png\",\n\t\"./79.png\": \"./public/pokemons/79.png\",\n\t\"./8.png\": \"./public/pokemons/8.png\",\n\t\"./80.png\": \"./public/pokemons/80.png\",\n\t\"./81.png\": \"./public/pokemons/81.png\",\n\t\"./82.png\": \"./public/pokemons/82.png\",\n\t\"./83.png\": \"./public/pokemons/83.png\",\n\t\"./84.png\": \"./public/pokemons/84.png\",\n\t\"./85.png\": \"./public/pokemons/85.png\",\n\t\"./86.png\": \"./public/pokemons/86.png\",\n\t\"./87.png\": \"./public/pokemons/87.png\",\n\t\"./88.png\": \"./public/pokemons/88.png\",\n\t\"./89.png\": \"./public/pokemons/89.png\",\n\t\"./9.png\": \"./public/pokemons/9.png\",\n\t\"./90.png\": \"./public/pokemons/90.png\",\n\t\"./91.png\": \"./public/pokemons/91.png\",\n\t\"./92.png\": \"./public/pokemons/92.png\",\n\t\"./93.png\": \"./public/pokemons/93.png\",\n\t\"./94.png\": \"./public/pokemons/94.png\",\n\t\"./95.png\": \"./public/pokemons/95.png\",\n\t\"./96.png\": \"./public/pokemons/96.png\",\n\t\"./97.png\": \"./public/pokemons/97.png\",\n\t\"./98.png\": \"./public/pokemons/98.png\",\n\t\"./99.png\": \"./public/pokemons/99.png\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./public/pokemons sync recursive ^\\\\.\\\\/.*\\\\.png$\";\n\n//# sourceURL=webpack://pokedex/./public/pokemons/_sync_^\\.\\/.*\\.png$?");
 
 /***/ })
 
@@ -901,7 +8820,7 @@ eval("module.exports = __webpack_require__.p + \"b680bb83e8943ca384d9.svg\";\n\n
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "";
+/******/ 		__webpack_require__.p = "/static/";
 /******/ 	})();
 /******/ 	
 /************************************************************************/
