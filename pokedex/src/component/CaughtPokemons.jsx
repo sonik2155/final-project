@@ -6,7 +6,7 @@ function CaughtPokemons({ pokemons }) {
 
   return (
     <section className="elements">
-        <h2 className="elements__title">My Pokedex</h2>
+      <h2 className="elements__title">My Pokedex</h2>
       <ul className="element">
         {filterPokemon.map((pokemon, i) => (
           <li className="element__card" key={pokemon.id}>

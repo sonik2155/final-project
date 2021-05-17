@@ -16,9 +16,7 @@ function Main({ pokemons, page, onUpdatePokemon }) {
         <ul className="element">
           {selectedPokemons.map((card, i) => (
             <li className="element__card" key={card.id}>
-              {<Card card={card}  
-              onUpdatePokemon={onUpdatePokemon}
-             />}
+              {<Card card={card} onUpdatePokemon={onUpdatePokemon} />}
             </li>
           ))}
         </ul>

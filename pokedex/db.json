@@ -2,13 +2,13 @@
   "pokemons": [
     {
       "name": "bulbasaur",
-      "id": 1,
-      "status": "isCaught",
-      "date": "11.05.2021"
+      "id": 1
     },
     {
       "name": "ivysaur",
-      "id": 2
+      "id": 2,
+      "status": "isCaught",
+      "date": "17.05.2021"
     },
     {
       "name": "venusaur",
@@ -741,7 +741,6 @@
     {
       "name": "sudowoodo",
       "id": 185
-
     },
     {
       "name": "politoed",

@@ -6,7 +6,7 @@ import PokemonPage from "./PokemonPage";
 import PageNotFound from "./PageNotFound";
 import CaughtPokemons from "./CaughtPokemons";
 import Pagination from "./Pagination";
-import { POKEMONS_PAGE, amountPage } from "../utils/constants";
+import { POKEMONS_PAGE } from "../utils/constants";
 import { Route, Switch } from "react-router-dom";
 import { getAllPokemon, patchPokemon } from "../utils/utils";
 import Context from "../utils/context";
@@ -62,8 +62,7 @@ function App() {
             <PokemonPage caugthPokemons={caugthPokemons} pokemons={pokemons} />
           </Route>
           <Route path="/CaughtPokemons">
-            <CaughtPokemons 
-            pokemons={pokemons}/>
+            <CaughtPokemons pokemons={pokemons} />
           </Route>
           <Route path="*">
             <PageNotFound />

@@ -1,5 +1,11 @@
 .not-found__title {
     font-family: "Fontdiner Swanky", cursive;
-    color: #c5dc50;
+    color: #f1f50f;
     font-size: 4rem;
+};
+
+@media screen and (max-width: 760px) {
+    .not-found__title {
+        font-size: 2rem;
+    }
 }

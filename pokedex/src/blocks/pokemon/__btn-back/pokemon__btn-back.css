@@ -17,6 +17,6 @@
 @media (max-width: 720px) {
     .pokemon__btn-back {
         margin: auto;
-        width: 100%;
+        width: 150px;
     }
 }

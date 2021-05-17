@@ -17,7 +17,7 @@ export function getAllPokemon() {
 };
 
 export function patchPokemon({status, id}) {
-    return fetch(`http://localhost:3000/pokemons`, {
+    return fetch(`http://localhost:3000/pokemons/2`, {
         method: 'PATCH',
         headers: {
             "Content-type": "application/json",

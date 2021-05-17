@@ -4,5 +4,5 @@ export default function PokemonDate() {
     return today;
 };
 
-export const POKEMONS_PAGE = 20;
+export const POKEMONS_PAGE = 21;
 

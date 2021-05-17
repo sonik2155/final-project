@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 
 function PokemonPage({ caugthPokemons, pokemons }) {
   let { id } = useParams();
-  const pokemon = pokemons.find(pokemon => pokemon.id ==  id)
+  const pokemon = pokemons.find(pokemon => pokemon.id == id)
 
   return (
         <section className="pokemon">
