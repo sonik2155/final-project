@@ -1,0 +1,10 @@
+.pagination__container {
+    gap: 6px;
+    max-width: 960px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5vh;
+  }

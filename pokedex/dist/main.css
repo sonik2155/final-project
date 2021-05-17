@@ -28,6 +28,7 @@
 .not-found__title{color:#f1f50f;font-family:Fontdiner Swanky,cursive;font-size:4rem};@media screen and (max-width:760px){.not-found__title{font-size:2rem}}
 .not-found__text{color:#fff;font-size:20px;margin-bottom:60px}
 .not-found__text-container{font-family:Fontdiner Swanky,cursive;margin:auto;text-align:center};
-.pagination{gap:6px;align-items:center;display:flex;flex-wrap:wrap;justify-content:center;margin:auto;max-width:960px;padding:5vh}
+.pagination{display:flex}
+.pagination__container{gap:6px;align-items:center;display:flex;flex-wrap:wrap;justify-content:center;margin:auto;max-width:960px;padding:5vh}
 .pagination__button{background-color:#deb887;border-radius:10px;cursor:-webkit-grab;cursor:grab;margin-left:4px}
 

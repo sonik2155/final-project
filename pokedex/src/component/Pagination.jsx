@@ -1,10 +1,12 @@
 import React from "react";
 
+
 function Pagination({ totalPages, handleClick }) {
   const pages = [...Array(totalPages).keys()].map((number) => number + 1);
 
   return (
     <div className="pagination">
+      <div className="pagination__container">
       {pages.map((num) => (
         <button
           className="pagination__button"
@@ -15,6 +17,7 @@ function Pagination({ totalPages, handleClick }) {
           {num}
         </button>
       ))}
+      </div>
     </div>
   );
 }

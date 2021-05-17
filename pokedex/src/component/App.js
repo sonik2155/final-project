@@ -17,11 +17,16 @@ function App() {
   const [caugthPokemons, setcaugthPokemons] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
+  const [loading, setIsLoading] = useState(false)
 
   useEffect(() => {
+    setIsLoading(true)
     getAllPokemon()
       .then((res) => setPokemons(res))
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err))
+      .finally(() => {
+        setIsLoading(false)
+      })
 
     setTotalPages(Math.ceil(pokemons.length / POKEMONS_PAGE));
   }, [pokemons.length]);
@@ -32,8 +37,7 @@ function App() {
       id: item.id,
     })
       .then((res) => {
-        setContext(res);
-        console.log(res);
+        setContext(res.id);
         setcaugthPokemons(res);
       })
       .catch((err) => console.log(err));
@@ -55,6 +59,7 @@ function App() {
               pokemons={pokemons}
               page={page}
               onUpdatePokemon={patchPokemonRes}
+              loading={loading}
             />
             <Pagination totalPages={totalPages} handleClick={handleClick} />
           </Route>
